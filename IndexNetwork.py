@@ -55,8 +55,8 @@ def get_Sample(input, printSample=False):
     if printSample :
         print(input, sample, classification)
     return torch.tensor(sample), torch.tensor(size, dtype = torch.float), torch.tensor(types, dtype = torch.float), torch.tensor(classification)
-
-  class IndexDataset(Dataset):
+  
+class IndexDataset(Dataset):
     def __init__(self, lines):
         #self.txt_path = "/workspaces/OLF-Data/OLFNetworkData.txt"
         self.data = []
@@ -76,3 +76,49 @@ def get_Sample(input, printSample=False):
     def __getitem__(self, idx):
         name, view_size, view_type, sample = self.data[idx]
         return name, view_size, view_type, sample
+
+class XfmrModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.token_embedding_table = nn.Embedding(len(chars), n_embd)
+        self.position_embedding_table = nn.Embedding(block_size, n_embd)
+        self.size_head = nn.Linear(1, n_embd, dtype = torch.float)
+        self.type_head = nn.Linear(1, n_embd, dtype = torch.float)
+        self.first_blocks = nn.Sequential(*[TimedBlock(n_embd, n_head=n_head) for _ in range(n_layer)])
+        self.blocks = nn.Sequential(*[Block(n_embd, n_head = n_head) for _ in range(n_layer)])
+        self.ln_f = nn.LayerNorm(n_embd)
+        self.lm_head = nn.Linear(n_embd, len(class_map.items()))
+        self.apply(self.__init__weights)
+
+    def __init__weights(self, module):
+        if isinstance(module, nn.Linear):
+            torch.nn.init.normal_(module.weight, mean = 0.0, std = 0.02)
+            if module.bias is not None:
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+    
+    def forward(self, A, B, C, targets = None):
+        Batch, T = A.shape
+        tok_emb = self.token_embedding_table(A)
+        pos_emb = self.position_embedding_table(torch.arange(T, device = device))
+        size_emb = self.size_head(B)
+        type_emb = self.type_head(C)
+        x = tok_emb + pos_emb
+        x = self.first_blocks(x)
+        x = torch.sum(x, dim=-2, keepdim = False)
+        x = x + type_emb + size_emb
+        x = self.blocks(x)
+        x = self.ln_f(x)
+        logits = self.lm_head(x)
+
+        if targets is None:
+            loss = None
+        else:
+            B, C = logits.shape
+            logits = logits.view(B, C)
+            loss_targets = torch.nn.functional.one_hot(targets, len(class_map.items()))
+            loss_targets = loss_targets.view(B, len(class_map.items()))
+            loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
+
+        return logits, loss
