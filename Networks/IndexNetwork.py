@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import time
 import os
+import Alpha
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
@@ -34,7 +35,7 @@ def get_Sample(input, printSample=False):
     types = [0]
     for i in range(len(line)):
         try :
-            sample[i] = chars.index(line[i])
+            sample[i] = Alpha.chars.index(line[i])
         except :
             pass
 
@@ -60,7 +61,7 @@ class IndexDataset(Dataset):
     def __init__(self, lines):
         #self.txt_path = "/workspaces/OLF-Data/OLFNetworkData.txt"
         self.data = []
-        self.chars = chars
+        self.chars = Alpha.chars
         self.class_map = class_map
         self.max_len = block_size
         #with open('OLFNetworkData.txt', 'r', encoding='utf-8') as f:
@@ -68,7 +69,7 @@ class IndexDataset(Dataset):
         for line in lines: # text.splitlines():
             name, view_size, view_type, sample = get_Sample(line)
             self.data.append([name, view_size, view_type, sample])
-        self.stoi = {ch:i+1 for i,ch in enumerate(chars)}
+        self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
     
     def __len__(self):
         return len(self.data)
@@ -80,7 +81,7 @@ class IndexDataset(Dataset):
 class IndexModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.token_embedding_table = nn.Embedding(len(chars), n_embd)
+        self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.size_head = nn.Linear(1, n_embd, dtype = torch.float)
         self.type_head = nn.Linear(1, n_embd, dtype = torch.float)

@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import time
 import os
+import Networks.IndexNetwork as indexNetwork
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
@@ -9,7 +10,7 @@ from dataclasses import dataclass
 
 txt_path = "Datasets/IndexNetworkData.txt"
 path = "Models/IndexNetwork.pt"
-model = XfmrModel()
+model = indexNetwork.IndexModel()
 if os.path.isfile(path):
     statedict = torch.load(path)
     model.load_state_dict(statedict)
