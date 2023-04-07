@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import NNets.FeedForward as ffd
 from torch.nn import functional as F
 
 class Head(nn.Module):

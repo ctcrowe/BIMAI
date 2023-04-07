@@ -1,6 +1,10 @@
 import torch
 import torch.nn as nn
 
+# hyperparameters
+dropout = 0.2
+# ------------
+
 class FeedForward(nn.Module):
     def __init__(self, n_embd):
         super().__init__()

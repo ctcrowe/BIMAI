@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import FeedForward as ffd
+import NNets.FeedForward as ffd
 from torch.nn import functional as F
 
 # hyperparameters
