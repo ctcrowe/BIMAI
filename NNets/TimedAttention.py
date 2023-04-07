@@ -1,9 +1,14 @@
 import torch
 import torch.nn as nn
+import FeedForward as ffd
 from torch.nn import functional as F
 
+# hyperparameters
+dropout = 0.2
+# ------------
+
 class TimedHead(nn.Module):
-    def __init__(self, head_size, n_embd):
+    def __init__(self, head_size, n_embd, block_size):
         super().__init__()
         self.key = nn.Linear(n_embd, head_size, bias = False)
         self.query = nn.Linear(n_embd, head_size, bias = False)
@@ -25,9 +30,9 @@ class TimedHead(nn.Module):
         return out
 
 class TimedMultiHeadAttention(nn.Module):
-    def __init__(self, num_heads, head_size, n_embd):
+    def __init__(self, num_heads, head_size, n_embd, block_size):
         super().__init__()
-        self.heads = nn.ModuleList([TimedHead(head_size, n_embd) for _ in range(num_heads)])
+        self.heads = nn.ModuleList([TimedHead(head_size, n_embd, block_size) for _ in range(num_heads)])
         self.proj = nn.Linear(head_size * num_heads, n_embd)
         self.dropout = nn.Dropout(dropout)
 
@@ -37,11 +42,11 @@ class TimedMultiHeadAttention(nn.Module):
         return out
       
 class TimedBlock(nn.Module):
-    def __init__(self, n_embd, n_head):
+    def __init__(self, n_embd, n_head, block_size):
         super().__init__()
         head_size = n_embd // n_head
-        self.sa = TimedMultiHeadAttention(n_head, head_size, n_embd)
-        self.ffwd = FeedForward(n_embd)
+        self.sa = TimedMultiHeadAttention(n_head, head_size, n_embd, block_size)
+        self.ffwd = ffd.FeedForward(n_embd)
         self.ln1 = nn.LayerNorm(n_embd)
         self.ln2 = nn.LayerNorm(n_embd)
 

@@ -87,7 +87,7 @@ class IndexModel(nn.Module):
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.size_head = nn.Linear(1, n_embd, dtype = torch.float)
         self.type_head = nn.Linear(1, n_embd, dtype = torch.float)
-        self.first_blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head=n_head) for _ in range(n_layer)])
+        self.first_blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head=n_head, block_size=block_size) for _ in range(n_layer)])
         self.blocks = nn.Sequential(*[static.Block(n_embd, n_head = n_head) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, len(class_map.items()))
