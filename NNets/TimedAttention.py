@@ -1,8 +1,9 @@
 import torch
 import torch.nn as nn
+from torch.nn import functional as F
 
 class TimedHead(nn.Module):
-    def __init__(self, head_size):
+    def __init__(self, head_size, n_embd):
         super().__init__()
         self.key = nn.Linear(n_embd, head_size, bias = False)
         self.query = nn.Linear(n_embd, head_size, bias = False)
@@ -24,9 +25,9 @@ class TimedHead(nn.Module):
         return out
 
 class TimedMultiHeadAttention(nn.Module):
-    def __init__(self, num_heads, head_size):
+    def __init__(self, num_heads, head_size, n_embd):
         super().__init__()
-        self.heads = nn.ModuleList([TimedHead(head_size) for _ in range(num_heads)])
+        self.heads = nn.ModuleList([TimedHead(head_size, n_embd) for _ in range(num_heads)])
         self.proj = nn.Linear(head_size * num_heads, n_embd)
         self.dropout = nn.Dropout(dropout)
 
@@ -35,11 +36,11 @@ class TimedMultiHeadAttention(nn.Module):
         out = self.dropout(self.proj(out))
         return out
       
-      class TimedBlock(nn.Module):
+class TimedBlock(nn.Module):
     def __init__(self, n_embd, n_head):
         super().__init__()
         head_size = n_embd // n_head
-        self.sa = TimedMultiHeadAttention(n_head, head_size)
+        self.sa = TimedMultiHeadAttention(n_head, head_size, n_embd)
         self.ffwd = FeedForward(n_embd)
         self.ln1 = nn.LayerNorm(n_embd)
         self.ln2 = nn.LayerNorm(n_embd)

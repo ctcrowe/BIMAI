@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.nn import functional as F
 
 class Head(nn.Module):
     def __init__(self, head_size):
