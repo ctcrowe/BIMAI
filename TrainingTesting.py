@@ -7,8 +7,8 @@ from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
 from dataclasses import dataclass
 
-txt_path = "IndexNetworkData.txt"
-path = "IndexNetwork.pt"
+txt_path = "Datasets/IndexNetworkData.txt"
+path = "Models/IndexNetwork.pt"
 model = XfmrModel()
 if os.path.isfile(path):
     statedict = torch.load(path)
