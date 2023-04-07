@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import time
 import os
-import Networks.IndexNetwork as indexNetwork
+import IndexNetwork as indexNetwork
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
