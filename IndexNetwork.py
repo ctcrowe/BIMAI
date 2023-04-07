@@ -77,7 +77,7 @@ class IndexDataset(Dataset):
         name, view_size, view_type, sample = self.data[idx]
         return name, view_size, view_type, sample
 
-class XfmrModel(nn.Module):
+class IndexModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(len(chars), n_embd)
