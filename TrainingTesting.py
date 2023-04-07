@@ -8,6 +8,20 @@ from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
 from dataclasses import dataclass
 
+# hyperparameters
+batch_size = 8 # how many independent sequences will we process in parallel?
+block_size = 32
+max_iters = 5000
+eval_interval = 100
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 128
+n_head = 6
+n_layer = 3
+dropout = 0.2
+# ------------
+
 txt_path = "Datasets/IndexNetworkData.txt"
 path = "Models/IndexNetwork.pt"
 model = indexNetwork.IndexModel()
@@ -21,7 +35,7 @@ print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
 
 def RunTraining():
-    train_dataset, test_dataset = create_datasets(txt_path)
+    train_dataset, test_dataset = indexNetwork.create_datasets(txt_path)
     batch_loader = InfiniteDataLoader(train_dataset, batch_size = batch_size)
 
     best_loss = None

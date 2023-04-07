@@ -3,8 +3,12 @@ import torch.nn as nn
 import NNets.FeedForward as ffd
 from torch.nn import functional as F
 
+# hyperparameters
+dropout = 0.2
+# ------------
+
 class Head(nn.Module):
-    def __init__(self, head_size):
+    def __init__(self, head_size, n_embd):
         super().__init__()
         self.key = nn.Linear(n_embd, head_size, bias = False)
         self.query = nn.Linear(n_embd, head_size, bias = False)
@@ -24,9 +28,9 @@ class Head(nn.Module):
         return out
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, num_heads, head_size):
+    def __init__(self, num_heads, head_size, n_embd):
         super().__init__()
-        self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
+        self.heads = nn.ModuleList([Head(head_size, n_embd) for _ in range(num_heads)])
         self.proj = nn.Linear(head_size * num_heads, n_embd)
         self.dropout = nn.Dropout(dropout)
 
@@ -39,8 +43,8 @@ class Block(nn.Module):
     def __init__(self, n_embd, n_head):
         super().__init__()
         head_size = n_embd // n_head
-        self.sa = MultiHeadAttention(n_head, head_size)
-        self.ffwd = FeedForward(n_embd)
+        self.sa = MultiHeadAttention(n_head, head_size, n_embd)
+        self.ffwd = ffd.FeedForward(n_embd)
         self.ln1 = nn.LayerNorm(n_embd)
         self.ln2 = nn.LayerNorm(n_embd)
 
