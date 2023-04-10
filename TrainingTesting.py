@@ -3,6 +3,7 @@ import torch.nn as nn
 import time
 import os
 import IndexNetwork as indexNetwork
+import NNets.DataLoading as dataLoading
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
@@ -35,7 +36,7 @@ print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
 
 def RunTraining():
-    train_dataset, test_dataset = indexNetwork.create_datasets(txt_path)
+    train_dataset, test_dataset = dataLoading.create_datasets(txt_path)
     batch_loader = InfiniteDataLoader(train_dataset, batch_size = batch_size)
 
     best_loss = None
