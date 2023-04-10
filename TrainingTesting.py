@@ -1,7 +1,6 @@
 import torch
 import time
 import os
-import IndexNetwork as indexNetwork
 import NNets.DataLoading as dataLoading
 from PickModel import pick
 
