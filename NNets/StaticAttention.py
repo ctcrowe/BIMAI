@@ -37,7 +37,7 @@ class MultiHeadAttention(nn.Module):
     def forward(self, x):
         out = torch.cat([h(x) for h in self.heads], dim=-1)
         out = self.dropout(self.proj(out))
-        return
+        return out
         
 class Block(nn.Module):
     def __init__(self, n_embd, n_head):

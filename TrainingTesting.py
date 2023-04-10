@@ -36,8 +36,8 @@ print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
 
 def RunTraining():
-    train_dataset, test_dataset = dataLoading.create_datasets(txt_path)
-    batch_loader = InfiniteDataLoader(train_dataset, batch_size = batch_size)
+    train_dataset, test_dataset = dataLoading.create_datasets(txt_path, indexNetwork.IndexDataset)
+    batch_loader = dataLoading.InfiniteDataLoader(train_dataset, batch_size = batch_size)
 
     best_loss = None
     step = 0
@@ -48,7 +48,7 @@ def RunTraining():
         batch = [t.to(device) for t in batch]
         A, B, C, D = batch
 
-        logits, loss = model(A, B, C, D)
+        logits, loss = model(device, A, B, C, D)
 
         model.zero_grad(set_to_none = True)
         loss.backward()
@@ -89,7 +89,7 @@ while True:
             B = B.view(1, -1)
             C = C.view(1, -1)
             print(A, B)
-            logits, loss = model(A, B, C)
+            logits, loss = model(device, A, B, C)
             print(logits)
             max = torch.argmax(logits)
             print(list(class_map.keys())[max])

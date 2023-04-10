@@ -17,7 +17,7 @@ def get_batch(split):
     x, y = x.to(device), y.to(device)
     return x, y
 
-def create_datasets(input_file):
+def create_datasets(input_file, dataset):
     with open(input_file, 'r') as f:
         data = f.read()
     inputs = data.splitlines()
@@ -28,8 +28,8 @@ def create_datasets(input_file):
     test_words = [inputs[i] for i in rp[-test_set_size:]]
     print(f"split up the dataset into {len(train_words)} training examples and {len(test_words)} test examples")
 
-    train_dataset = IndexDataset(train_words)
-    test_dataset = IndexDataset(test_words)
+    train_dataset = dataset(train_words)
+    test_dataset = dataset(test_words)
     return train_dataset, test_dataset
   
 class InfiniteDataLoader:

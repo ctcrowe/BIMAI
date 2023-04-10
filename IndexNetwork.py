@@ -100,7 +100,7 @@ class IndexModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
-    def forward(self, A, B, C, targets = None):
+    def forward(self, device, A, B, C, targets = None):
         Batch, T = A.shape
         tok_emb = self.token_embedding_table(A)
         pos_emb = self.position_embedding_table(torch.arange(T, device = device))
