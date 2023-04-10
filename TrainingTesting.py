@@ -3,6 +3,7 @@ import time
 import os
 import IndexNetwork as indexNetwork
 import NNets.DataLoading as dataLoading
+from PickModel import pick
 
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
@@ -48,30 +49,23 @@ def RunTraining():
 
         step+=1
         
-netType = None
-while netType is None:
-    netSel = input("Network Type?")
-    if netSel == "Index":
-        netType = "Index"
-        txt_path = "Datasets/IndexNetworkData.txt"
-        path = "Models/IndexNetwork.pt"
-        model = indexNetwork.IndexModel()
-        testMdl = indexNetwork.Test
-
-if os.path.isfile(path):
-    statedict = torch.load(path)
-    model.load_state_dict(statedict)
-
-m = model.to(device)
-print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
-optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
-        
 while True:
-    usage = input("Train or Test?")
-    if usage == "Test":
-        test = ""
-        while test != "X":
-            text = input("Test your room name")
-            print(testMdl(model, text, device))
-    elif usage == "Train":
-        RunTraining()
+    txt_path, path, model, testMdl = pick(input("Network Type?"))
+    if model is not None:
+        if os.path.isfile(path):
+            statedict = torch.load(path)
+            model.load_state_dict(statedict)
+
+        m = model.to(device)
+        print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+        optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
+        
+        while True:
+            usage = input("Train or Test?")
+            if usage == "Test":
+                test = ""
+                while test != "X":
+                    text = input("Test your room name")
+                    print(testMdl(model, text, device))
+            elif usage == "Train":
+                RunTraining()
