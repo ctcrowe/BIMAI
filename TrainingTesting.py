@@ -81,7 +81,7 @@ netType = None
 while netType is None:
     netSel = input("Network Type?")
     if netSel == "Index":
-        netType = index
+        netType = "Index"
         txt_path = "Datasets/IndexNetworkData.txt"
         path = "Models/IndexNetwork.pt"
         model = indexNetwork.IndexModel()
