@@ -62,8 +62,8 @@ def RunTraining():
             print(f"step {step} | loss {loss.item():.4f} | step time {(t1-t0)*1000:.2f}ms")
 
         if step > 0 and step % 500 == 0:
-            train_loss = evaluate(model, train_dataset, max_batches=5 * batch_size)
-            test_loss = evaluate(model, test_dataset, max_batches=5 * batch_size)
+            train_loss = dataLoading.evaluate(model, device, train_dataset, batch_size, max_batches=5 * batch_size)
+            test_loss = dataLoading.evaluate(model, device, test_dataset, batch_size, max_batches=5 * batch_size)
             print(f"step {step} train loss: {train_loss} test loss: {test_loss}")
             # save the model to disk if it has improved
             if best_loss is None or test_loss < best_loss:

@@ -45,3 +45,18 @@ class InfiniteDataLoader:
             self.data_iter = iter(self.train_loader)
             batch = next(self.data_iter)
         return batch
+
+def evaluate(model, device, dataset, batch_size = 1, max_batches=None):
+    model.eval()
+    loader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=0)
+    losses = []
+    for i, batch in enumerate(loader):
+        batch = [t.to(device) for t in batch]
+        A, B, C, D = batch
+        logits, loss = model(device, A, B, C, D)
+        losses.append(loss.item())
+        if max_batches is not None and i >= max_batches:
+            break
+    mean_loss = torch.tensor(losses).mean().item()
+    model.train()
+    return mean_loss

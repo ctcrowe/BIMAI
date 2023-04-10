@@ -1,14 +1,10 @@
 import torch
 import torch.nn as nn
-import time
-import os
 import NNets.Alpha as Alpha
 import NNets.TimedAttention as timed
 import NNets.StaticAttention as static
 from torch.nn import functional as F
 from torch.utils.data import Dataset
-from torch.utils.data.dataloader import DataLoader
-from dataclasses import dataclass
 
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
