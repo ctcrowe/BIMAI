@@ -22,9 +22,8 @@ def RunTraining():
         t0 = time.time()
         batch = batch_loader.next()
         batch = [t.to(device) for t in batch]
-        A, B, C, D = batch
 
-        logits, loss = model(device, A, B, C, D)
+        logits, loss = model(device, *batch)
 
         model.zero_grad(set_to_none = True)
         loss.backward()
