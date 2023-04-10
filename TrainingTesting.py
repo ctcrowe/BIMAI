@@ -23,18 +23,6 @@ n_layer = 3
 dropout = 0.2
 # ------------
 
-#txt_path = "Datasets/IndexNetworkData.txt"
-#path = "Models/IndexNetwork.pt"
-#model = indexNetwork.IndexModel()
-#if os.path.isfile(path):
-#    statedict = torch.load(path)
-#    model.load_state_dict(statedict)
-
-#m = model.to(device)
-#print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
-
-#optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
-
 def RunTraining():
     train_dataset, test_dataset = dataLoading.create_datasets(txt_path, indexNetwork.IndexDataset)
     batch_loader = dataLoading.InfiniteDataLoader(train_dataset, batch_size = batch_size)
@@ -85,14 +73,15 @@ while netType is None:
         txt_path = "Datasets/IndexNetworkData.txt"
         path = "Models/IndexNetwork.pt"
         model = indexNetwork.IndexModel()
-        if os.path.isfile(path):
-            statedict = torch.load(path)
-            model.load_state_dict(statedict)
+        testMdl = indexNetwork.Test
 
-        m = model.to(device)
-        print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+if os.path.isfile(path):
+    statedict = torch.load(path)
+    model.load_state_dict(statedict)
 
-        optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
+m = model.to(device)
+print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
         
 while True:
     usage = input("Train or Test?")
@@ -100,15 +89,6 @@ while True:
         test = ""
         while test != "X":
             text = input("Test your room name")
-            sample = get_Sample(text, True)
-            A, B, C, D = sample
-            A = A.view(1, -1)
-            B = B.view(1, -1)
-            C = C.view(1, -1)
-            print(A, B)
-            logits, loss = model(device, A, B, C)
-            print(logits)
-            max = torch.argmax(logits)
-            print(list(class_map.keys())[max])
+            print(testMdl(model, text, device))
     elif usage == "Train":
         RunTraining()

@@ -53,7 +53,19 @@ def get_Sample(input, printSample=False):
     if printSample :
         print(input, sample, classification)
     return torch.tensor(sample), torch.tensor(size, dtype = torch.float), torch.tensor(types, dtype = torch.float), torch.tensor(classification)
-  
+
+def Test(model, text, device):
+    sample = get_Sample(text, True)
+    A, B, C, D = sample
+    A = A.view(1, -1)
+    B = B.view(1, -1)
+    C = C.view(1, -1)
+    print(A, B)
+    logits, loss = model(device, A, B, C)
+    print(logits)
+    max = torch.argmax(logits)
+    print(list(class_map.keys())[max])
+
 class IndexDataset(Dataset):
     def __init__(self, lines):
         #self.txt_path = "/workspaces/OLF-Data/OLFNetworkData.txt"
