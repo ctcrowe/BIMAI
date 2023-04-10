@@ -76,7 +76,24 @@ def RunTraining():
         #    print_samples(num=10)
 
         step+=1
+        
+netType = None
+while netType is None:
+    netSel = input("Network Type?")
+    if netSel == "Index":
+        netType = index
+        txt_path = "Datasets/IndexNetworkData.txt"
+        path = "Models/IndexNetwork.pt"
+        model = indexNetwork.IndexModel()
+        if os.path.isfile(path):
+            statedict = torch.load(path)
+            model.load_state_dict(statedict)
 
+        m = model.to(device)
+        print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+
+        optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
+        
 while True:
     usage = input("Train or Test?")
     if usage == "Test":
