@@ -23,17 +23,17 @@ n_layer = 3
 dropout = 0.2
 # ------------
 
-txt_path = "Datasets/IndexNetworkData.txt"
-path = "Models/IndexNetwork.pt"
-model = indexNetwork.IndexModel()
-if os.path.isfile(path):
-    statedict = torch.load(path)
-    model.load_state_dict(statedict)
+#txt_path = "Datasets/IndexNetworkData.txt"
+#path = "Models/IndexNetwork.pt"
+#model = indexNetwork.IndexModel()
+#if os.path.isfile(path):
+#    statedict = torch.load(path)
+#    model.load_state_dict(statedict)
 
-m = model.to(device)
-print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+#m = model.to(device)
+#print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 
-optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
+#optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
 
 def RunTraining():
     train_dataset, test_dataset = dataLoading.create_datasets(txt_path, indexNetwork.IndexDataset)
