@@ -1,7 +1,7 @@
 import IndexNetwork as indexNetwork
 
-def pick(input):
-    if input == "Index":
+def pick(text):
+    if text == "Index":
         txt_path = "Datasets/IndexNetworkData.txt"
         path = "Models/IndexNetwork.pt"
         model = indexNetwork.IndexModel()
