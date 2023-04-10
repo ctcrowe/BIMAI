@@ -12,8 +12,8 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 # ------------
 
-def RunTraining():
-    train_dataset, test_dataset = dataLoading.create_datasets(txt_path, indexNetwork.IndexDataset)
+def RunTraining(dataset):
+    train_dataset, test_dataset = dataLoading.create_datasets(txt_path, dataset)
     batch_loader = dataLoading.InfiniteDataLoader(train_dataset, batch_size = batch_size)
 
     best_loss = None
@@ -50,7 +50,7 @@ def RunTraining():
         step+=1
         
 while True:
-    txt_path, path, model, testMdl = pick(input("Network Type?"))
+    txt_path, path, model, testMdl, dataset = pick(input("Network Type?"))
     if model is not None:
         if os.path.isfile(path):
             statedict = torch.load(path)
@@ -68,4 +68,4 @@ while True:
                     text = input("Test your room name")
                     print(testMdl(model, text, device))
             elif usage == "Train":
-                RunTraining()
+                RunTraining(dataset)

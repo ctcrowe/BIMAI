@@ -52,8 +52,7 @@ def evaluate(model, device, dataset, batch_size = 1, max_batches=None):
     losses = []
     for i, batch in enumerate(loader):
         batch = [t.to(device) for t in batch]
-        A, B, C, D = batch
-        logits, loss = model(device, A, B, C, D)
+        logits, loss = model(device, *batch)
         losses.append(loss.item())
         if max_batches is not None and i >= max_batches:
             break
