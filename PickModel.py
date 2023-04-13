@@ -1,5 +1,6 @@
 import IndexNetwork as indexNetwork
 import DetailTypeNetwork as detailTypeNetwork
+import OLFNetwork as olfNetwork
 
 def pick(text):
     if text == "Index":
@@ -16,4 +17,11 @@ def pick(text):
         testMdl = detailTypeNetwork.Test
         dataset = detailTypeNetwork.DetailTypeDataset
         return txt_path, path, model, testMdl, dataset
+    if text == "OLF":
+        txt_path = "Datasets/OLFNetworkData.txt"
+        path = "Models/OLFNetwork.pt"
+        model = olfNetwork.OLFModel()
+        testMdl = olfNetwork.Test
+        dataset = olfNetwork.OLFDataset
+        return txt_path, path, model, testMdl, datset
     return None, None, None, None, None
