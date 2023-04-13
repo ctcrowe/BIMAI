@@ -51,9 +51,8 @@ def Test(model, text, device):
     max = torch.argmax(logits)
     print(list(class_map.keys())[max])
 
-class DetailTypeDataset(Dataset):
+class OLFDataset(Dataset):
     def __init__(self, lines):
-        #self.txt_path = "/workspaces/OLF-Data/OLFNetworkData.txt"
         self.data = []
         self.chars = Alpha.chars
         self.class_map = class_map
