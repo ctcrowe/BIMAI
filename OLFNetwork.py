@@ -10,7 +10,6 @@ batch_size = 8 # how many independent sequences will we process in parallel?
 block_size = 128
 max_iters = 5000
 eval_interval = 100
-learning_rate = 3e-4
 eval_iters = 200
 n_embd = 64
 n_head = 4

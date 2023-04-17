@@ -23,5 +23,5 @@ def pick(text):
         model = olfNetwork.OLFModel()
         testMdl = olfNetwork.Test
         dataset = olfNetwork.OLFDataset
-        return txt_path, path, model, testMdl, datset
+        return txt_path, path, model, testMdl, dataset
     return None, None, None, None, None
