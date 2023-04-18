@@ -1,6 +1,7 @@
 Exterior Wall Types,1,1,6 - Partition Types Legends and Schedules
 WALK OFF MAT - R-2 TRANSITION,2,0,9 - INTERIOR DETAILS
 Wall Type A.1,8,0,6 - Partition Types Legends and Schedules
+WALK OFF MAT TO LVT-1 TRANSITION,2,0,9 - INTERIOR DETAILS
 Partition Type A.1,8,0,6 - Partition Types Legends and Schedules
 Floor Plan - First Floor,96,0,2 - Building Plans
 Level 1,96,0,2 - Building Plans
