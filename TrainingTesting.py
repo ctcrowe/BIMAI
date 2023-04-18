@@ -6,7 +6,7 @@ from PickModel import pick
 
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
-learning_rate = 3e-6
+learning_rate = 3e-4
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 # ------------
