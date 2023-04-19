@@ -18,6 +18,8 @@ Exterior Wall Types,1,1,6 - Partition Types Legends and Schedules
 Wall Type A.1,8,0,6 - Partition Types Legends and Schedules
 Partition Type A.1,8,0,6 - Partition Types Legends and Schedules
 Floor Plan - First Floor,96,0,2 - Building Plans
+FINISH PLAN - FIRST FLOOR-,1,1,2 - BUILDING PLANS
+FINISH PLAN - FIRST FLOOR,1,1,2 - BUILDING PLANS
 Level 1,96,0,2 - Building Plans
 Roof Level,96,0,2 - Building Plans
 North Elevation,96,0,3 - Building Elevations
