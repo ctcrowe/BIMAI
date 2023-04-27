@@ -9,6 +9,22 @@ bathroom,N/A
 toilet room,N/A
 mens,N/A
 womens,N/A
+MECH / ELEC.,Accessory Storage Areas, Mechanical Equipment Room
+MECH / ELEC,Accessory Storage Areas, Mechanical Equipment Room
+UNIT 128.,Residential
+UNIT 128,Residential
+UNIT 129.,Residential
+UNIT 129,Residential
+UNIT 129 PATIO.,Residential
+UNIT 129 PATIO,Residential
+UNIT 128 PATIO.,Residential
+UNIT 128 PATIO,Residential
+FITNESS RESTROOM.,N/A
+FITNESS RESTROOM,N/A
+FITNESS CENTER.,Exercise Rooms
+FITNESS CENTER,Exercise Rooms
+CITYSIDE RESIDENT LOUNGE.,Assembly Unconcentrated
+CITYSIDE RESIDENT LOUNGE,Assembly Unconcentrated
 OFFICE.,Business Areas
 OFFICE,Business Areas
 bathroom,N/A
