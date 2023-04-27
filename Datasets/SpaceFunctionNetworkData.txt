@@ -2,6 +2,9 @@ OPEN OFFICE,Business Areas
 mens restroom,N/A
 womens restroom,N/A
 restroom,N/A
+MECH.,Accessory Storage Areas, Mechanical Equipment Room
+MECH,Accessory Storage Areas, Mechanical Equipment Room
+OPEN OFFICE.,Business Areas
 bathroom,N/A
 toilet room,N/A
 mens,N/A
