@@ -56,7 +56,7 @@ def Test(model, text, device):
     max = torch.argmax(logits)
     print(list(class_map.keys())[max])
 
-class OLFDataset(Dataset):
+class SpaceFunctionDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
