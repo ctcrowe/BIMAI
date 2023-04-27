@@ -9,6 +9,8 @@ bathroom,N/A
 toilet room,N/A
 mens,N/A
 womens,N/A
+OFFICE.,Business Areas
+OFFICE,Business Areas
 bathroom,N/A
 MENS,N/A
 CONFERENCE.,Assembly Unconcentrated
