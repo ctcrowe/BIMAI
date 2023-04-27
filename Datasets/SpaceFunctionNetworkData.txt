@@ -1,0 +1,63 @@
+OPEN OFFICE,Business Areas
+mens restroom,N/A
+womens restroom,N/A
+restroom,N/A
+bathroom,N/A
+toilet room,N/A
+mens,N/A
+womens,N/A
+bathroom,N/A
+bath,N/A
+Restroom,N/A
+Theater,Assembly Standing
+Exhibit,Exhibit Gallery and Museum
+Assembly,Assembly Concentrated
+gallery,Exhibit Gallery and Museum
+Theater,Assembly Fixed Seats
+Exhibit,Exhibit Gallery and Museum
+pantry,Assembly Unconcentrated
+break rm,Assembly Unconcentrated
+Break Room,Assembly Unconcentrated
+Pantry,Assembly Unconcentrated
+CONFERENCE RM,Assembly Unconcentrated
+CONF,Assembly Unconcentrated
+roof deck,Assembly Unconcentrated
+studio,Residential
+lobby,Assembly Unconcentrated
+Office,Business Areas
+Open Office,Business Areas
+Office,Business Areas
+Open Office,Business Areas
+Office,Business Areas
+Open Office,Business Areas
+Office,Business Areas
+Open Office,Business Areas
+Office,Business Areas
+Open Office,Business Areas
+UNIT 101,Residential
+unit,Residential
+UNIT 301,Residential
+unit 600 balcony,Residential
+suite,Residential
+RM,Residential
+STE,Residential
+suite,Residential
+room,Residential
+trash chute access room,Accessory Storage Areas, Mechanical Equipment Room
+janitor,Accessory Storage Areas, Mechanical Equipment Room
+stor,Accessory Storage Areas, Mechanical Equipment Room
+work room,Accessory Storage Areas, Mechanical Equipment Room
+jan,Accessory Storage Areas, Mechanical Equipment Room
+copy,Accessory Storage Areas, Mechanical Equipment Room
+stor,Accessory Storage Areas, Mechanical Equipment Room
+work room,Accessory Storage Areas, Mechanical Equipment Room
+jan,Accessory Storage Areas, Mechanical Equipment Room
+copy,Accessory Storage Areas, Mechanical Equipment Room
+Warehouse,Warehouses
+storage,Accessory Storage Areas, Mechanical Equipment Room
+storage,Accessory Storage Areas, Mechanical Equipment Room
+CORRIDOR,N/A
+HALLWAY,N/A
+CIRCULATION,N/A
+STAIR,N/A
+NORTH STAIR,N/A
