@@ -9,7 +9,7 @@ def pick(text):
         path = "Models/SpaceFunctionNetwork.pt"
         model = sfNetwork.SpaceFunctionModel()
         testMdl = sfNetwork.Test
-        dataset = sfNetowrk.SpaceFunctionDataset
+        dataset = sfNetwork.SpaceFunctionDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Index":
         txt_path = "Datasets/IndexNetworkData.txt"

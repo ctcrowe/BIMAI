@@ -61,3 +61,34 @@ HALLWAY,N/A
 CIRCULATION,N/A
 STAIR,N/A
 NORTH STAIR,N/A
+MULTI PURPOSE ROOM,Unconcentrated Assembly
+DINING,Unconcentrated Assembly
+LOBBY LOUNGE AREA,Unconcentrated Assembly
+CHEMICAL WASTE,Storage Stock and Shipping Areas
+LOADING DOCK,Storage Stock and Shipping Areas
+MEDICAL WASTE,Storage Stock and Shipping Areas
+RECEIVING,Storage Stock and Shipping Areas
+STORAGE,Accessory Storage Areas, Mechanical Equipment Room
+VIVARIUM WASTE,Storage Stock and Shipping Areas
+DINING,Unconcentrated Assembly
+LOBBY,Unconcentrated Assembly
+LOBBY LOUNGE AREA,Unconcentrated Assembly
+MULTI PURPOSE ROOM,Unconcentrated Assembly
+KITCHEN,Commercial Kitchens
+STORAGE,Accessory Storage Areas, Mechanical Equipment Room
+3 CHEMICAL BIOLOGY LABS,Laboratory
+4 MELOCULAR BIOLOGY LABS,Laboratory
+AIRLOCK ENTRY,Laboratory
+AIRLOCK EXIT,Laboratory
+ANIMAL PREP,Laboratory
+ANIMAL RECEIVING,Laboratory
+ANIMAL RECOVER,Laboratory
+ANTE ROOM,Laboratory
+AUTO CLAVE,Laboratory
+BEHAVE TEST,Laboratory
+CHEMICAL STORAGE,Laboratory
+CLEAN CAGE WASH,Laboratory
+COLD ROOM,Accessory Storage Areas, Mechanical Equipment Room
+CONF. ROOM,Unconcentrated Assembly
+GROUP SCIENTIST OFFICE,Business Areas
+FREEZER ROOM,Accessory Storage Areas, Mechanical Equipment Room
