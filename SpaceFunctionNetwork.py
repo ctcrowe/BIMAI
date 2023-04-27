@@ -24,7 +24,7 @@ class_map = {"Accessory Storage Areas, Mechanical Equipment Room" : 0, "Agricult
             "Exercise Rooms" : 21, "Group H-5 Fabrication and Manufacturing Areas" : 22, "Industrial Areas" : 23, "Inpatient Treatment Areas" : 24, "Outpatient Areas" : 25,
             "Institutional Sleeping Areas" : 26, "Commercial Kitchens" : 27, "Educational Laboratory" : 28, "Laboratory" : 29, "Laboratory Suite" : 30, "Library Reading Room" : 31,
             "Library Stack" : 32, "Locker Rooms" : 33, "Mall Buildings" : 34, "Mercantile" : 35, "Storage Stock and Shipping Areas" : 36, "Parking Garages" : 37, "Residential" : 38,
-            "Skating Rinks and Swimming Pools" : 39, "Rink and Pool Decks" : 40, "Stages and Platforms" : 41, "Warehouses" : 42}
+            "Skating Rinks and Swimming Pools" : 39, "Rink and Pool Decks" : 40, "Stages and Platforms" : 41, "Warehouses" : 42, "N/A" : 43}
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
