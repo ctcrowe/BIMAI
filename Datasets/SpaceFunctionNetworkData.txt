@@ -118,3 +118,4 @@ COLD ROOM,Accessory Storage Areas, Mechanical Equipment Room
 CONF. ROOM,Unconcentrated Assembly
 GROUP SCIENTIST OFFICE,Business Areas
 FREEZER ROOM,Accessory Storage Areas, Mechanical Equipment Room
+ELEVATOR MACH. ROOM,Accessory Storage Areas, Mechanical Equipment Room
