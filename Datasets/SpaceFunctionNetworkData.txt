@@ -10,6 +10,9 @@ toilet room,N/A
 mens,N/A
 womens,N/A
 bathroom,N/A
+MENS,N/A
+CONFERENCE.,Assembly Unconcentrated
+CONFERENCE,Assembly Unconcentrated
 bath,N/A
 Restroom,N/A
 Theater,Assembly Standing
