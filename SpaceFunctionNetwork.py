@@ -17,7 +17,14 @@ n_layer = 4
 dropout = 0.2
 # ------------
 
-class_map = {"Accessory Storage Areas, Mechanical Equipment Room" : 0, 
+class_map = {"Accessory Storage Areas, Mechanical Equipment Room" : 0, "Agricultural Building" : 1, "Aircraft Hangars" : 2, "Baggage Claim" : 3, "Baggage Handling" : 4,
+            "Airport Concourse" : 5, "Airport Waiting Areas" : 6, "Gaming Floors" : 7, "Exhibit Gallery and Museum" : 8, "Assembly Fixed Seats" : 9,
+             "Assembly Concentrated" : 10, "Assembly Standing" : 11, "Assembly Unconcentrated" : 12, "Bowling Additional Areas" : 13, "Business Areas" : 14,
+            "Business Concentrated" : 15, "Courtrooms" : 16, "Day Care" : 17, "Dormitories" : 18, "Classroom" : 19, "Shops and Other Vocational Areas" : 20,
+            "Exercise Rooms" : 21, "Group H-5 Fabrication and Manufacturing Areas" : 22, "Industrial Areas" : 23, "Inpatient Treatment Areas" : 24, "Outpatient Areas" : 25,
+            "Institutional Sleeping Areas" : 26, "Commercial Kitchens" : 27, "Educational Laboratory" : 28, "Laboratory" : 29, "Laboratory Suite" : 30, "Library Reading Room" : 31,
+            "Library Stack" : 32, "Locker Rooms" : 33, "Mall Buildings" : 34, "Mercantile" : 35, "Storage Stock and Shipping Areas" : 36, "Parking Garages" : 37, "Residential" : 38,
+            "Skating Rinks and Swimming Pools" : 39, "Rink and Pool Decks" : 40, "Stages and Platforms" : 41, "Warehouses" : 42}
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
