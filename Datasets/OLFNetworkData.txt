@@ -4,6 +4,11 @@ womens restroom,0
 restroom,0
 bathroom,0
 toilet room,0
+MECH. / ELEC,300
+EAST STAIR,,0
+EAST STAIR,0
+NORTH STAIR.,0
+NORTH STAIR,0
 mens,0
 womens,0
 bathroom,0
