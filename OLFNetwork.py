@@ -48,7 +48,7 @@ def Test(model, text, device):
     logits, loss = model(device, A)
     print(logits)
     max = torch.argmax(logits)
-    print(list(class_map.keys())[max])
+    return list(class_map.keys())[max]
 
 class OLFDataset(Dataset):
     def __init__(self, lines):
