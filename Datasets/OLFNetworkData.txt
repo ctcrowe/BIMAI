@@ -3,6 +3,7 @@ mens restroom,0
 womens restroom,0
 restroom,0
 bathroom,0
+THEATER,7
 toilet room,0
 MECH. / ELEC,300
 EAST STAIR,,0
