@@ -2,8 +2,16 @@ import IndexNetwork as indexNetwork
 import DetailTypeNetwork as detailTypeNetwork
 import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
+import VisNetwork as VisNetwork
 
 def pick(text):
+    if text == "Visibility":
+        txt_path = "Dataset/VisibilityData.txt"
+        path = "Models/VisibilityNetwork.pt"
+        model = VisNetwork.VisModel()
+        testMdl = VisNetwork.Text
+        dataset = VisNetwork.VisDataset
+        return txt_path, path, model, testMdl, datset
     if text == "Space Function":
         txt_path = "Datasets/SpaceFunctionNetworkData.txt"
         path = "Models/SpaceFunctionNetwork.pt"
