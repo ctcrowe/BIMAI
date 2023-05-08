@@ -67,14 +67,14 @@ class OLFDataset(Dataset):
         data, class_name = self.data[idx]
         return data, class_name
     
-class OLFModel(nn.Module):
+class VisibilityModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
-        self.lm_head = nn.Linear(n_embd, len(class_map.items()))
+        self.lm_head = nn.Linear(n_embd, 372)
         self.apply(self.__init__weights)
 
     def __init__weights(self, module):
