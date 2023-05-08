@@ -28,10 +28,7 @@ def get_Sample(input, printSample=False):
         except :
             pass
     try :
-        classification = lines[-1]
-        classification = class_map[classification]
-    except :
-        classification = 0
+        classification = lines[1:]
         
     if printSample :
         print(input, sample, classification)
@@ -47,7 +44,7 @@ def Test(model, text, device):
     max = torch.argmax(logits)
     return list(class_map.keys())[max]
 
-class OLFDataset(Dataset):
+class VisibilityDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
