@@ -57,19 +57,18 @@ class VisibilityDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
-        self.class_map = class_map
         self.max_len = block_size
         for line in lines: # text.splitlines():
-            base, sample = get_Sample(line)
-            self.data.append([base, sample])
+            name, category, sample = get_Sample(line)
+            self.data.append([name, category, sample])
         self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
     
     def __len__(self):
         return len(self.data)
     
     def __getitem__(self, idx):
-        data, class_name = self.data[idx]
-        return data, class_name
+        name, category, output = self.data[idx]
+        return name, category, output
     
 class VisibilityModel(nn.Module):
     def __init__(self):
@@ -93,14 +92,18 @@ class VisibilityModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
-    def forward(self, device, A, B, C, targets = None):
+    def forward(self, device, A, B, targets = None):
         Batch1, T1 = A.shape
-        tok_emb1 = self.token_embedding_table(A)
-        pos_emb1 = self.position_embedding_table(torch.arange(T1, device = device))
+        tok_emb1 = self.name_token_embedding_table(A)
+        pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device))
         Batch2, T2 = B.shape
-        tok_emb2 = self.token_embedding_table(B)
-        pos_emb2 = self.position_embedding_table(torch.arange(T2, device = device))
-        x = tok_emb1 + pos_emb1
+        tok_emb2 = self.cat_token_embedding_table(B)
+        pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device))
+        x1 = tok_emb1 + pos_emb1
+        x2 = tok_emb2 + pos_emb2
+        x1 = self.nameBlock(x1)
+        x2 = self.catBlock(x2)
+        x = x1 + x2
         x = self.blocks(x)
         x = self.ln_f(x)
         x = self.lm_head(x)
