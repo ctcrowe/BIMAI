@@ -21,25 +21,20 @@ def get_Sample(input, printSample=False):
     input = input.strip().upper()
     lines = input.split(',')
     line = lines[0]
-    line2 = lines[1]
     viewName = [0] * block_size
-    catName = [0] * block_size
     for i in range(len(line)):
         try :
             viewName[i] = Alpha.chars.index(line[i])
         except :
             pass
-    for i in range(len(line2)):
-        try :
-            catName[i] = Alpha.chars.index(line2[i])
-        except :
-            pass
     try :
         classification = lines[-1] - 1
+    catch :
+        classification = 0
         
     if printSample :
-        print(input, viewName, catName, classification)
-    return torch.tensor(viewName), torch.tensor(catName), torch.tensor(classification)
+        print(input, viewName, classification)
+    return torch.tensor(viewName), torch.tensor(classification)
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
