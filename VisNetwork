@@ -35,22 +35,26 @@ def get_Sample(input, printSample=False):
         except :
             pass
     try :
+        cutSurf = lines[2]
+    catch :
+        cutSurf = 0
+    try :
         classification = lines[-1]
     catch :
         classification = 1
         
     if printSample :
-        print(input, sample, catName, classification)
-    return torch.tensor(sample), torch.tensor(classification)
+        print(input, sample, catName, cutSurf, classification)
+    return torch.tensor(sample), torch.tensor(catName), torch.tensor(cutSurf), torch.tensor(classification)
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
-    A, B, C = sample
+    A, B, C, D = sample
     A = A.view(1, -1)
     B = B.view(1, -1)
     print(A)
     print(B)
-    logits, loss = model(device, A, B)
+    logits, loss = model(device, A, B, C)
     print(logits)
     max = torch.argmax(logits)
     return max
