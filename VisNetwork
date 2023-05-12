@@ -74,8 +74,12 @@ class VisibilityDataset(Dataset):
 class VisibilityModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
-        self.position_embedding_table = nn.Embedding(block_size, n_embd)
+        self.name_token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
+        self.name_position_embedding_table = nn.Embedding(block_size, n_embd)
+        self.cat_token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
+        self.cat_position_embedding_table = nn.Embedding(block_size, n_embd)
+        self.nameBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
+        self.catBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, 372)
@@ -105,10 +109,10 @@ class VisibilityModel(nn.Module):
         if targets is None:
             loss = None
         else:
-            B, C = logits.shape
-            logits = logits.view(B, C)
+            Y, Z = logits.shape
+            logits = logits.view(Y, Z)
             loss_targets = torch.nn.functional.one_hot(targets, len(class_map.items()))
-            loss_targets = loss_targets.view(B, len(class_map.items()))
+            loss_targets = loss_targets.view(Y, len(class_map.items()))
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
         return logits, loss
