@@ -36,6 +36,8 @@ def get_Sample(input, printSample=False):
             pass
     try :
         classification = lines[-1]
+    catch :
+        classification = 1
         
     if printSample :
         print(input, sample, catName, classification)
