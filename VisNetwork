@@ -43,10 +43,12 @@ def get_Sample(input, printSample=False):
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
-    A, B = sample
+    A, B, C = sample
     A = A.view(1, -1)
+    B = B.view(1, -1)
     print(A)
-    logits, loss = model(device, A)
+    print(B)
+    logits, loss = model(device, A, B)
     print(logits)
     max = torch.argmax(logits)
     return list(class_map.keys())[max]
@@ -57,8 +59,6 @@ class VisibilityDataset(Dataset):
         self.chars = Alpha.chars
         self.class_map = class_map
         self.max_len = block_size
-        #with open('OLFNetworkData.txt', 'r', encoding='utf-8') as f:
-            #text = f.read()
         for line in lines: # text.splitlines():
             base, sample = get_Sample(line)
             self.data.append([base, sample])
@@ -89,11 +89,14 @@ class VisibilityModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
-    def forward(self, device, idx, targets = None):
-        B, T = idx.shape
-        tok_emb = self.token_embedding_table(idx)
-        pos_emb = self.position_embedding_table(torch.arange(T, device = device))
-        x = tok_emb + pos_emb
+    def forward(self, device, A, B, C, targets = None):
+        Batch1, T1 = A.shape
+        tok_emb1 = self.token_embedding_table(A)
+        pos_emb1 = self.position_embedding_table(torch.arange(T1, device = device))
+        Batch2, T2 = B.shape
+        tok_emb2 = self.token_embedding_table(B)
+        pos_emb2 = self.position_embedding_table(torch.arange(T2, device = device))
+        x = tok_emb1 + pos_emb1
         x = self.blocks(x)
         x = self.ln_f(x)
         x = self.lm_head(x)
