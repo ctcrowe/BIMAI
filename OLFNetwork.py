@@ -29,7 +29,7 @@ def get_Sample(input, printSample=False):
             pass
     try :
         classification = lines[-1] - 1
-    catch :
+    except :
         classification = 0
         
     if printSample :

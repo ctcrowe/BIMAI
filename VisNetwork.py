@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 import NNets.Alpha as Alpha
 import NNets.TimedAttention as timed
-import NNets.StaticAttention as statAtten
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 
@@ -36,12 +35,12 @@ def get_Sample(input, printSample=False):
         except :
             pass
     try :
-        cutSurf = lines[2]
-    catch :
+        cutSurf = int(lines[2]) - 1
+    except :
         cutSurf = 0
     try :
-        classification = lines[-1]
-    catch :
+        classification = int(lines[-1])
+    except :
         classification = 1
         
     if printSample :
@@ -67,16 +66,16 @@ class VisibilityDataset(Dataset):
         self.chars = Alpha.chars
         self.max_len = block_size
         for line in lines: # text.splitlines():
-            name, category, sample = get_Sample(line)
-            self.data.append([name, category, sample])
+            name, category, gtype, sample = get_Sample(line)
+            self.data.append([name, category, gtype, sample])
         self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
     
     def __len__(self):
         return len(self.data)
     
     def __getitem__(self, idx):
-        name, category, output = self.data[idx]
-        return name, category, output
+        name, category, gtype, output = self.data[idx]
+        return name, category, gtype, output
     
 class VisibilityModel(nn.Module):
     def __init__(self):
@@ -87,8 +86,8 @@ class VisibilityModel(nn.Module):
         self.cat_position_embedding_table = nn.Embedding(block_size, n_embd)
         self.nameBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
         self.catBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
-        self.cutSurf_head = nn.Linear(1, n_embd, dtype = torch.float)
-        self.first_block = Block(n_embd, n_head=n_head)
+        self.cutSurf_head = nn.Linear(batch_size, n_embd)
+        self.first_block = timed.TimedBlock(n_embd, n_head=n_head, block_size=block_size)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, 372)
@@ -115,9 +114,10 @@ class VisibilityModel(nn.Module):
         x2 = self.catBlock(x2)
         x = x1 + x2
         x = self.first_block(x)
-        cutSurf_embd = self.cutSurf_head(c)
-        cutSurf_x = cutSurf_embd.unsqueeze(1).repeat(1, block_size, 1)
+        cutSurf_embd = self.cutSurf_head(C)
+        cutSurf_x = cutSurf_embd.unsqueeze(1).repeat(1, n_embd, 1)
         x = x + cutSurf_x
+        #x = x + cutSurf_embd
         x = self.ln_f(x)
         x = self.lm_head(x)
         logits = torch.sum(x, dim=-2, keepdim=False)
