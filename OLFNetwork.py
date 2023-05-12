@@ -17,28 +17,29 @@ n_layer = 4
 dropout = 0.2
 # ------------
 
-class_map = {"0" : 0, "5" : 1, "7" : 2, "11" : 3, "15" : 4, "20" : 5, "30" : 6, "35" : 7, "40" : 8, "50" : 9, "60" : 10, "100" : 11, "120" : 12,
-            "150" : 13, "200" : 14, "240" : 15, "300" : 16, "500" : 17}
-
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
     lines = input.split(',')
     line = lines[0]
-    sample = [0] * block_size
+    line2 = lines[1]
+    viewName = [0] * block_size
+    catName = [0] * block_size
     for i in range(len(line)):
         try :
-            sample[i] = Alpha.chars.index(line[i])
+            viewName[i] = Alpha.chars.index(line[i])
+        except :
+            pass
+    for i in range(len(line2)):
+        try :
+            catName[i] = Alpha.chars.index(line2[i])
         except :
             pass
     try :
-        classification = lines[-1]
-        classification = class_map[classification]
-    except :
-        classification = 0
+        classification = lines[-1] - 1
         
     if printSample :
-        print(input, sample, classification)
-    return torch.tensor(sample), torch.tensor(classification)
+        print(input, viewName, catName, classification)
+    return torch.tensor(viewName), torch.tensor(catName), torch.tensor(classification)
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
