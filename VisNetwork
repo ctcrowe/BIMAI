@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import NNets.Alpha as Alpha
 import NNets.TimedAttention as timed
+import NNets.StaticAttention as statAtten
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 
@@ -52,9 +53,10 @@ def Test(model, text, device):
     A, B, C, D = sample
     A = A.view(1, -1)
     B = B.view(1, -1)
+    C = C.view(1, -1)
     print(A)
     print(B)
-    logits, loss = model(device, A, B, C)
+    logits, loss = model(device, A, B, C, D)
     print(logits)
     max = torch.argmax(logits)
     return max
@@ -85,6 +87,8 @@ class VisibilityModel(nn.Module):
         self.cat_position_embedding_table = nn.Embedding(block_size, n_embd)
         self.nameBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
         self.catBlock = timed.TimedBlock(n_embd, n_head = n_head, block_size = block_size)
+        self.cutSurf_head = nn.Linear(1, n_embd, dtype = torch.float)
+        self.first_block = Block(n_embd, n_head=n_head)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, 372)
@@ -98,7 +102,7 @@ class VisibilityModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
-    def forward(self, device, A, B, targets = None):
+    def forward(self, device, A, B, C, targets = None):
         Batch1, T1 = A.shape
         tok_emb1 = self.name_token_embedding_table(A)
         pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device))
@@ -110,7 +114,10 @@ class VisibilityModel(nn.Module):
         x1 = self.nameBlock(x1)
         x2 = self.catBlock(x2)
         x = x1 + x2
-        x = self.blocks(x)
+        x = self.first_block(x)
+        cutSurf_embd = self.cutSurf_head(c)
+        cutSurf_x = cutSurf_embd.unsqueeze(1).repeat(1, block_size, 1)
+        x = x + cutSurf_x
         x = self.ln_f(x)
         x = self.lm_head(x)
         logits = torch.sum(x, dim=-2, keepdim=False)
