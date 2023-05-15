@@ -59,7 +59,7 @@ def Test(model, text, device):
     logits, loss = model(device, A, B, C)
     print(logits)
     max = torch.argmax(logits)
-    return max
+    return str(max.item())
 
 class VisibilityDataset(Dataset):
     def __init__(self, lines):
