@@ -2473,3 +2473,1291 @@ FINISH PLAN - FIRST FLOOR,Spaces:Interior,0,1
 FINISH PLAN - FIRST FLOOR,Pier Cap Tags,0,1
 FINISH PLAN - FIRST FLOOR,Dimensions,0,1
 FINISH PLAN - FIRST FLOOR,Dimensions:Automatic Sketch Dimensions,0,1
+FLOOR PLAN - FIRST FLOOR,Part Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Alignment Station Labels,0,1
+FLOOR PLAN - FIRST FLOOR,Piers,0,1
+FLOOR PLAN - FIRST FLOOR,Piers,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Walls,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Walls,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Piles,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Piles,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Towers,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Towers,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Columns,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Columns,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Foundations,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Foundations,1,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Caps,0,1
+FLOOR PLAN - FIRST FLOOR,Piers:Pier Caps,1,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Hangers,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Insulation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Floors,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Floors:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Mechanical Equipment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps,0,3
+FLOOR PLAN - FIRST FLOOR,Ramps,1,5
+FLOOR PLAN - FIRST FLOOR,Ramps:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Stringers,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Stringers,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Up Arrow,0,3
+FLOOR PLAN - FIRST FLOOR,Ramps:Up Arrow,1,5
+FLOOR PLAN - FIRST FLOOR,Ramps:Stringers Beyond Cut Line,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Stringers Beyond Cut Line,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:UP text,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:UP text,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Ramps Beyond Cut Line,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Ramps Beyond Cut Line,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:DOWN text,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:DOWN text,1,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Down Arrow,0,1
+FLOOR PLAN - FIRST FLOOR,Ramps:Down Arrow,1,1
+FLOOR PLAN - FIRST FLOOR,Cable Tray Fittings,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Tray Fittings:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Foundation Span Direction Symbol,0,1
+FLOOR PLAN - FIRST FLOOR,Communication Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Air Systems,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Wall Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Temporary Structure Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Shear Studs,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Shear Studs,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Anchors,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Anchors,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Symbol,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Symbol,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Connections:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Bolts,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Bolts,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Reference,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Reference,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Profiles,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Profiles,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Welds,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Welds,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Plates,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Plates,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Others,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Others,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Holes,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Holes,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Modifiers,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connections:Modifiers,1,1
+FLOOR PLAN - FIRST FLOOR,Planting,0,3
+FLOOR PLAN - FIRST FLOOR,Planting:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Ceiling Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Wall Foundations,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Mass,0,3
+FLOOR PLAN - FIRST FLOOR,Mass,1,5
+FLOOR PLAN - FIRST FLOOR,Mass:Pattern Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Pattern Lines,1,1
+FLOOR PLAN - FIRST FLOOR,Mass:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:<Hidden Lines>,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Interior Wall,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Interior Wall,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Zone,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Zone,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Pattern Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Pattern Fill,1,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Roof,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Roof,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Exterior Wall,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Exterior Wall,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Floor,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Floor,1,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Glazing,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Glazing,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Skylight,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Skylight,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Nodes,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Nodes,1,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Opening,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Mass Opening,1,2
+FLOOR PLAN - FIRST FLOOR,Mass:Gridlines,0,1
+FLOOR PLAN - FIRST FLOOR,Mass:Gridlines,1,5
+FLOOR PLAN - FIRST FLOOR,Mass:Form,0,3
+FLOOR PLAN - FIRST FLOOR,Mass:Form,1,5
+FLOOR PLAN - FIRST FLOOR,Air Terminals,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Accessory Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Security Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Window Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Tread/Riser Numbers,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Communication Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Piping Systems,0,1
+FLOOR PLAN - FIRST FLOOR,Piping Systems:Reference Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Fire Protection Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Panel Schedule Graphics,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Item Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Lines,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment:Center Line,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment:Symbology,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_Hidden,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:3D Course,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_Drain,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:3d Coarse,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:Host,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_ShowerBath,0,5
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:3d Fine,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_WaterCloset,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_Sink,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:Course Bounding Box,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:Masking Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixtures:Hidden Objects,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing Tags,0,1
+FLOOR PLAN - FIRST FLOOR,System-Zones,0,8
+FLOOR PLAN - FIRST FLOOR,Ceilings,0,3
+FLOOR PLAN - FIRST FLOOR,Ceilings,1,1
+FLOOR PLAN - FIRST FLOOR,Ceilings:Substrate [2],0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Substrate [2],1,5
+FLOOR PLAN - FIRST FLOOR,Ceilings:Finish 2 [5],0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Finish 2 [5],1,3
+FLOOR PLAN - FIRST FLOOR,Ceilings:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Ceilings:<Hidden Lines>,1,3
+FLOOR PLAN - FIRST FLOOR,Ceilings:Finish 1 [4],0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Finish 1 [4],1,5
+FLOOR PLAN - FIRST FLOOR,Ceilings:Common Edges,0,3
+FLOOR PLAN - FIRST FLOOR,Ceilings:Common Edges,1,5
+FLOOR PLAN - FIRST FLOOR,Ceilings:Surface Pattern,0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Surface Pattern,1,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Cut Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Ceilings:Cut Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Ceilings:Membrane Layer,0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Membrane Layer,1,5
+FLOOR PLAN - FIRST FLOOR,Ceilings:Thermal/Air Layer [3],0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Thermal/Air Layer [3],1,5
+FLOOR PLAN - FIRST FLOOR,Ceilings:Structure [1],0,2
+FLOOR PLAN - FIRST FLOOR,Ceilings:Structure [1],1,5
+FLOOR PLAN - FIRST FLOOR,Section Boxes,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Center Line,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Lining,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Symbology,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Ductwork:Insulation,0,1
+FLOOR PLAN - FIRST FLOOR,Bolt Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing,1,5
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Diaphragms,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Diaphragms,1,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Arches,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Arches,1,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Trusses,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Trusses,1,5
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Cross Bracing,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Cross Bracing,1,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Girders,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing:Girders,1,1
+FLOOR PLAN - FIRST FLOOR,Elevation Marks,0,1
+FLOOR PLAN - FIRST FLOOR,Data Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Segments,0,1
+FLOOR PLAN - FIRST FLOOR,Anchor Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Conduit Fittings,0,1
+FLOOR PLAN - FIRST FLOOR,Conduit Fittings:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Sprinklers,0,1
+FLOOR PLAN - FIRST FLOOR,Approach Slab Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Doors,0,3
+FLOOR PLAN - FIRST FLOOR,Doors,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Hidden,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Hidden,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:Panel,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Panel,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:Trim,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Trim,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Frame/Mullion,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:Frame/Mullion,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Threshold,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Threshold,1,1
+FLOOR PLAN - FIRST FLOOR,Doors:Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Glass,1,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Panel,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Panel,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:<Hidden Lines>,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:Opening,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Opening,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Frame,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Frame,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Elevation Swing,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Elevation Swing,1,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Zero,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Threshold,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Threshold,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Hardware,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Hardware,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Handle,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Handle,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Dashed Line,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Dashed Line,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Glass,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:Hardware,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Hardware,1,1
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_ElevationSwing,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_ElevationSwing,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Trim,0,3
+FLOOR PLAN - FIRST FLOOR,Doors:MCA_Trim,1,3
+FLOOR PLAN - FIRST FLOOR,Doors:Swing,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Swing,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Accessibility,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Accessibility,1,5
+FLOOR PLAN - FIRST FLOOR,Doors:Plan Swing,0,1
+FLOOR PLAN - FIRST FLOOR,Doors:Plan Swing,1,3
+FLOOR PLAN - FIRST FLOOR,Lighting Fixture Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Lighting Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Assembly Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Tags,0,1
+FLOOR PLAN - FIRST FLOOR,RVT Links,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Systems,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Systems,1,1
+FLOOR PLAN - FIRST FLOOR,Curtain Systems:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Systems:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Curtain Systems:Curtain System Grids,0,1
+FLOOR PLAN - FIRST FLOOR,Mechanical Equipment Set Boundary Lines,0,5
+FLOOR PLAN - FIRST FLOOR,Structural Rebar Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Parking,0,3
+FLOOR PLAN - FIRST FLOOR,Parking:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Ducts,0,3
+FLOOR PLAN - FIRST FLOOR,Ducts:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,Ducts:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,Ducts:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Door Tags,0,1
+FLOOR PLAN - FIRST FLOOR,System-Zone Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Internal Area Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Revision Clouds,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Cables,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Cables,1,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Hanger Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Imports in Families,0,1
+FLOOR PLAN - FIRST FLOOR,Conduits,0,1
+FLOOR PLAN - FIRST FLOOR,Conduits:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,Conduits:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,Conduits:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Multi-Category Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Abutment Wall Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Isolated Foundations,0,5
+FLOOR PLAN - FIRST FLOOR,Flex Pipes,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Pipes:Center Line,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Pipes:Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Property Line Segment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panel Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Links,0,5
+FLOOR PLAN - FIRST FLOOR,Structural Trusses,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Trusses:Stick Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,HVAC Zones,0,1
+FLOOR PLAN - FIRST FLOOR,HVAC Zones:Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,HVAC Zones:Boundary,0,1
+FLOOR PLAN - FIRST FLOOR,HVAC Zones:Reference Lines,0,1
+FLOOR PLAN - FIRST FLOOR,HVAC Zones:Interior Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Column Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Schedules,0,1
+FLOOR PLAN - FIRST FLOOR,Mass Floor Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Spare/Space Circuits,0,1
+FLOOR PLAN - FIRST FLOOR,Hole Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Medical Equipment,0,3
+FLOOR PLAN - FIRST FLOOR,Medical Equipment,1,1
+FLOOR PLAN - FIRST FLOOR,Medical Equipment:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Medical Equipment:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Site,0,3
+FLOOR PLAN - FIRST FLOOR,Site,1,5
+FLOOR PLAN - FIRST FLOOR,Site:Pads,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Pads,1,1
+FLOOR PLAN - FIRST FLOOR,Site:Survey Point,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Survey Point,1,1
+FLOOR PLAN - FIRST FLOOR,Site:Property Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Property Lines,1,1
+FLOOR PLAN - FIRST FLOOR,Site:Internal Origin,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Internal Origin,1,1
+FLOOR PLAN - FIRST FLOOR,Site:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Site:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Site:Project Base Point,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Project Base Point,1,1
+FLOOR PLAN - FIRST FLOOR,Site:Property Line Segments,0,1
+FLOOR PLAN - FIRST FLOOR,Site:Property Line Segments,1,1
+FLOOR PLAN - FIRST FLOOR,Analytical Columns,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Columns:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Columns:Base Segment,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Columns:Top Segment,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Systems,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Systems:Reference Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Zone Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Fire Protection,0,1
+FLOOR PLAN - FIRST FLOOR,Fire Protection,1,5
+FLOOR PLAN - FIRST FLOOR,Fire Protection:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Fire Protection:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Abutments,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments,1,5
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Walls,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Walls,1,5
+FLOOR PLAN - FIRST FLOOR,Abutments:Approach Slabs,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Approach Slabs,1,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Piles,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Piles,1,1
+FLOOR PLAN - FIRST FLOOR,Abutments:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Foundations,0,1
+FLOOR PLAN - FIRST FLOOR,Abutments:Abutment Foundations,1,1
+FLOOR PLAN - FIRST FLOOR,Duct Placeholders,0,1
+FLOOR PLAN - FIRST FLOOR,Bearing Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Planes,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Planes:View Outline,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Planes:Existing,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Planes:Path Of Travel,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Tray Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Multi-Rebar Annotations,0,1
+FLOOR PLAN - FIRST FLOOR,Matchline,0,6
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_People,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_REF BOX,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_GROUND,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_HATCH,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_Entourage Light,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_DIM,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_Entourgae Medium,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_WALL,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:0,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_TEXT 2_,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_DOOR_,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_TEXT,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:EXISITNG$SI-PEOPLE,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:Defpoints,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_DASHED,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_DOOR SWING,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:H_CUT,0,1
+FLOOR PLAN - FIRST FLOOR,Accessible Route - Width.dwg:AR-WALL-SECTION,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Accessories,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Fitting Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture System Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Callout Heads,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture Systems,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture Systems:<Hidden Lines>,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture Systems:FLOOR COLORING,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture Systems:File Cabinet Below,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture Systems:Workstation Shelves,0,1
+FLOOR PLAN - FIRST FLOOR,Telephone Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Lines,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:3 Solid ------,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_2.00mm - Dashed,0,16
+FLOOR PLAN - FIRST FLOOR,Lines:2 Hidden 1/8 -,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Insulation Batting Lines>,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.70mm - Dashed,0,13
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_1.00mm - Dashed,0,14
+FLOOR PLAN - FIRST FLOOR,Lines:<Demolished>,0,2
+FLOOR PLAN - FIRST FLOOR,Lines:1 Solid Grey 200,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:H_People,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:<Beyond>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.50mm - Dashed,0,12
+FLOOR PLAN - FIRST FLOOR,Lines:1 Center 1/16",0,1
+FLOOR PLAN - FIRST FLOOR,Lines:2.00mm - Solid,0,16
+FLOOR PLAN - FIRST FLOOR,Lines:0.13mm - Dashed,0,8
+FLOOR PLAN - FIRST FLOOR,Lines:<Medium Lines>,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:1.40mm - Dashed,0,15
+FLOOR PLAN - FIRST FLOOR,Lines:<Axis of Rotation>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Centerline>,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:2 Solid -,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_1.40mm - Dashed,0,15
+FLOOR PLAN - FIRST FLOOR,Lines:3 Solid -----,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:Invisible,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.13mm - Dashed,0,8
+FLOOR PLAN - FIRST FLOOR,Lines:2 Dash 1/16,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:1 Dash 1/16,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Space Separation>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:H_REF BOX,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:2 Center 3/8 -,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:1.00mm - Dashed,0,13
+FLOOR PLAN - FIRST FLOOR,Lines:H_GROUND,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:2 Center 3/8,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:3 Solid ----,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Lines>,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_2.00mm - Solid,0,16
+FLOOR PLAN - FIRST FLOOR,Lines:TLCD-MEDIUM-HIDDEN,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:<Area Boundary>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.25mm - Dashed,0,10
+FLOOR PLAN - FIRST FLOOR,Lines:6 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:5 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:4 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:3 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:2 Solid,0,8
+FLOOR PLAN - FIRST FLOOR,Lines:1 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_Invisible,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:<Wide Lines>,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:1 Dash 3/32 Grey 128,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Path of Travel Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.35mm - Dashed,0,11
+FLOOR PLAN - FIRST FLOOR,Lines:H_Entourgae Medium,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.25mm - Dashed,0,10
+FLOOR PLAN - FIRST FLOOR,Lines:H_WALL,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:0.70mm - Solid,0,13
+FLOOR PLAN - FIRST FLOOR,Lines:0.50mm - Red Dashed,0,12
+FLOOR PLAN - FIRST FLOOR,Lines:TLCD-LIGHT-CENTERLINE,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.50mm - Solid,0,12
+FLOOR PLAN - FIRST FLOOR,Lines:1 Dash,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.18mm - Solid,0,9
+FLOOR PLAN - FIRST FLOOR,Lines:<Fabric Sheets>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.70mm - Dashed,0,13
+FLOOR PLAN - FIRST FLOOR,Lines:0.25mm - Solid,0,10
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.13mm - Solid,0,8
+FLOOR PLAN - FIRST FLOOR,Lines:0.35mm - Solid,0,11
+FLOOR PLAN - FIRST FLOOR,Lines:2 Solid ---,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.35mm - Dashed,0,11
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.50mm - Dashed,0,12
+FLOOR PLAN - FIRST FLOOR,Lines:1 Hidden 1/16",0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.18mm - Solid,0,9
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.70mm - Solid,0,13
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.35mm - Solid,0,11
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.50mm - Solid,0,12
+FLOOR PLAN - FIRST FLOOR,Lines:5 Solid --,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:3 Solid --,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:<Sketch>,0,3
+FLOOR PLAN - FIRST FLOOR,Lines:1.40mm - Solid,0,15
+FLOOR PLAN - FIRST FLOOR,Lines:1 Solid Grey 128,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:2.00mm - Dashed,0,16
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.25mm - Solid,0,10
+FLOOR PLAN - FIRST FLOOR,Lines:1.00mm - Solid,0,14
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_1.00mm - Solid,0,14
+FLOOR PLAN - FIRST FLOOR,Lines:<Room Separation>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_0.18mm - Dashed,0,9
+FLOOR PLAN - FIRST FLOOR,Lines:H_DASHED,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Hidden>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:MCA_1.40mm - Solid,0,15
+FLOOR PLAN - FIRST FLOOR,Lines:<Overhead>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.18mm - Dashed,0,9
+FLOOR PLAN - FIRST FLOOR,Lines:<Fabric Envelope>,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:2  Dash 1/16,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:1 Dash 1/16 ----,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:<Thin Lines>,0,5
+FLOOR PLAN - FIRST FLOOR,Lines:2 Center 1/4,0,1
+FLOOR PLAN - FIRST FLOOR,Lines:0.13mm - Solid,0,8
+FLOOR PLAN - FIRST FLOOR,Wires,0,1
+FLOOR PLAN - FIRST FLOOR,Wires:Home Run Arrows,0,1
+FLOOR PLAN - FIRST FLOOR,Wires:Wire Tick Marks,0,1
+FLOOR PLAN - FIRST FLOOR,Pipes,0,3
+FLOOR PLAN - FIRST FLOOR,Pipes:Center Line,0,1
+FLOOR PLAN - FIRST FLOOR,Pipes:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,Pipes:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,Pipes:Hydraulic Separation Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Audio Visual Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Audio Visual Devices,1,1
+FLOOR PLAN - FIRST FLOOR,Audio Visual Devices:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Audio Visual Devices:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Profile Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Stiffener Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Signage,0,1
+FLOOR PLAN - FIRST FLOOR,Signage,1,3
+FLOOR PLAN - FIRST FLOOR,Signage:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Signage:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Topography,0,1
+FLOOR PLAN - FIRST FLOOR,Topography,1,3
+FLOOR PLAN - FIRST FLOOR,Topography:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Topography:Topography Links,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Boundary Point,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Boundary Point,1,1
+FLOOR PLAN - FIRST FLOOR,Topography:Triangulation Edges,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Triangulation Edges,1,1
+FLOOR PLAN - FIRST FLOOR,Topography:Interior Point,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Interior Point,1,1
+FLOOR PLAN - FIRST FLOOR,Topography:Primary Contours,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Primary Contours,1,5
+FLOOR PLAN - FIRST FLOOR,Topography:Secondary Contours,0,1
+FLOOR PLAN - FIRST FLOOR,Topography:Secondary Contours,1,1
+FLOOR PLAN - FIRST FLOOR,Casework Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Project Information,0,1
+FLOOR PLAN - FIRST FLOOR,Wall Tags,0,11
+FLOOR PLAN - FIRST FLOOR,Cable Tray Fitting Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Internal Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Internal Loads:Internal Line Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Internal Loads:Internal Point Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Internal Loads:Internal Area Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Circuits,0,1
+FLOOR PLAN - FIRST FLOOR,Analysis Display Style,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Insulations,0,1
+FLOOR PLAN - FIRST FLOOR,Food Service Equipment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Ducts,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Ducts:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Ducts:Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Insulation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Plate Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Rebar Cover References,0,2
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Snow Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Roof Live Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Wind Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Dead Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Accidental Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Live Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Seismic Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Load Cases:Temperature Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Support Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement:Boundary,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement:Boundary,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Truss Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Slab Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Plan Region,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Horizontal Bracing,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Horizontal Bracing,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Kicker Bracing,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Kicker Bracing,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Rigid Links,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Rigid Links,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Web,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Web,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Girder,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Girder,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Stick Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Stick Symbols,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Other,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Other,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Joist,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Joist,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Vertical Bracing,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Vertical Bracing,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Chord,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Chord,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Location Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Location Lines,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Purlin,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Purlin,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Hidden Faces,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Framing:Hidden Faces,1,1
+FLOOR PLAN - FIRST FLOOR,Mechanical Equipment Set Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Tendon Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Fixtures,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Fixtures:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Air Terminal Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Damper Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Data Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Annotations,0,1
+FLOOR PLAN - FIRST FLOOR,Lighting Fixtures,0,1
+FLOOR PLAN - FIRST FLOOR,Lighting Fixtures:Light Source,0,1
+FLOOR PLAN - FIRST FLOOR,Lighting Fixtures:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Lighting Fixtures:MCA_UnderCabinetLighting,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Insulations,0,1
+FLOOR PLAN - FIRST FLOOR,Span Direction Symbol,0,1
+FLOOR PLAN - FIRST FLOOR,Section Line,0,1
+FLOOR PLAN - FIRST FLOOR,Section Line:Broken Section Line,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Tray Runs,0,1
+FLOOR PLAN - FIRST FLOOR,Section Marks,0,1
+FLOOR PLAN - FIRST FLOOR,Section Marks:<Medium Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Section Marks:<Wide Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Section Marks:<Thin Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:MCA_Hidden,0,3
+FLOOR PLAN - FIRST FLOOR,Generic Models:MCA_Hidden,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:Thick Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models:Thick Lines,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:Opening Trim,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models:Opening Trim,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:Overhead,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Models:Overhead,1,5
+FLOOR PLAN - FIRST FLOOR,Generic Models:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Generic Models:MCA_Zero,1,5
+FLOOR PLAN - FIRST FLOOR,Lighting Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Floor Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Sprinkler Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analysis Results,0,1
+FLOOR PLAN - FIRST FLOOR,Scope Boxes,0,1
+FLOOR PLAN - FIRST FLOOR,Line Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Render Regions,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Equipment,0,3
+FLOOR PLAN - FIRST FLOOR,Electrical Equipment:<Hidden Lines>,0,3
+FLOOR PLAN - FIRST FLOOR,Stair Landing Tags,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Containment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels,0,3
+FLOOR PLAN - FIRST FLOOR,Curtain Panels,1,4
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Panel,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Panel,1,5
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Glass,1,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Panel Material 1,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Panels:Panel Material 1,1,5
+FLOOR PLAN - FIRST FLOOR,Fire Alarm Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Braces,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Braces:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Braces:Start Segment,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Braces:End Segment,0,5
+FLOOR PLAN - FIRST FLOOR,Temporary Structures,0,1
+FLOOR PLAN - FIRST FLOOR,Temporary Structures,1,5
+FLOOR PLAN - FIRST FLOOR,Temporary Structures:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Temporary Structures:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Displacement Path,0,1
+FLOOR PLAN - FIRST FLOOR,Roads,0,1
+FLOOR PLAN - FIRST FLOOR,Roads,1,5
+FLOOR PLAN - FIRST FLOOR,Roads:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Roads:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Duct Lining Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Floors,0,3
+FLOOR PLAN - FIRST FLOOR,Floors,1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Interior Edges,0,1
+FLOOR PLAN - FIRST FLOOR,Floors:Interior Edges,1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Substrate [2],0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Substrate [2],1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Finish 2 [5],0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Finish 2 [5],1,5
+FLOOR PLAN - FIRST FLOOR,Floors:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Floors:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Finish 1 [4],0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Finish 1 [4],1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Common Edges,0,3
+FLOOR PLAN - FIRST FLOOR,Floors:Common Edges,1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Surface Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Floors:Surface Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Floors:Slab Edges,0,1
+FLOOR PLAN - FIRST FLOOR,Floors:Slab Edges,1,1
+FLOOR PLAN - FIRST FLOOR,Floors:Cut Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Floors:Cut Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Floors:Membrane Layer,0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Membrane Layer,1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Thermal/Air Layer [3],0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Thermal/Air Layer [3],1,5
+FLOOR PLAN - FIRST FLOOR,Floors:Structure [1],0,2
+FLOOR PLAN - FIRST FLOOR,Floors:Structure [1],1,5
+FLOOR PLAN - FIRST FLOOR,Flex Duct Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Point Clouds,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Wall Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Foundation Slabs,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Foundation Slabs:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Windows,0,3
+FLOOR PLAN - FIRST FLOOR,Windows,1,5
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Hidden,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Hidden,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:Trim,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:Trim,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:Frame/Mullion,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:Frame/Mullion,1,5
+FLOOR PLAN - FIRST FLOOR,Windows:Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:Glass,1,1
+FLOOR PLAN - FIRST FLOOR,Windows:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Windows:Opening,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:Opening,1,1
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Frame,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Frame,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:Elevation Swing,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:Elevation Swing,1,1
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Swing,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Swing,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:Sill/Head,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:Sill/Head,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Zero,1,1
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Hardware,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Hardware,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Glass,1,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Trim,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:MCA_Trim,1,5
+FLOOR PLAN - FIRST FLOOR,Windows:Plan Swing,0,3
+FLOOR PLAN - FIRST FLOOR,Windows:Plan Swing,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement:Boundary,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement:Boundary,1,1
+FLOOR PLAN - FIRST FLOOR,Stair Run Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Rebar Shape,0,1
+FLOOR PLAN - FIRST FLOOR,Rebar Shape,1,1
+FLOOR PLAN - FIRST FLOOR,Parts,0,3
+FLOOR PLAN - FIRST FLOOR,Parts,1,5
+FLOOR PLAN - FIRST FLOOR,Parts:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Parts:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Nurse Call Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Columns,0,3
+FLOOR PLAN - FIRST FLOOR,Columns,1,6
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Hidden,0,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Hidden,1,3
+FLOOR PLAN - FIRST FLOOR,Columns:<Hidden Lines>,0,3
+FLOOR PLAN - FIRST FLOOR,Columns:<Hidden Lines>,1,3
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Tertiary,0,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Tertiary,1,6
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Zero,1,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Finish,0,3
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Finish,1,3
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Glass,1,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Primary,0,3
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Primary,1,6
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Secondary,0,1
+FLOOR PLAN - FIRST FLOOR,Columns:MCA_Secondary,1,6
+FLOOR PLAN - FIRST FLOOR,Area Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Routing Preferences,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations:Solid 2,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations:2 Solid,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations:Centerline,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations:Medium Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Annotations:North Line,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Decks,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Decks,1,1
+FLOOR PLAN - FIRST FLOOR,Bridge Decks:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Decks:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Area Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Abutment Pile Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Pipe Connections,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Pipe Connections:Connection Line Symbol,0,5
+FLOOR PLAN - FIRST FLOOR,View Reference,0,1
+FLOOR PLAN - FIRST FLOOR,Vertical Circulation,0,1
+FLOOR PLAN - FIRST FLOOR,Vertical Circulation,1,1
+FLOOR PLAN - FIRST FLOOR,Vertical Circulation:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Vertical Circulation:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Filled region,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Column Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement:Boundary,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement:Boundary,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement:Fabric Wire,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement:Fabric Wire,1,5
+FLOOR PLAN - FIRST FLOOR,Audio Visual Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Connection Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Conduit Fitting Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Raster Images,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Column Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management,1,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:Vibration Dampers,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:Vibration Dampers,1,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:Vibration Isolators,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Management:Vibration Isolators,1,1
+FLOOR PLAN - FIRST FLOOR,Abutment Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Beam Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Adaptive Points,0,1
+FLOOR PLAN - FIRST FLOOR,Adaptive Points:Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Adaptive Points:Planes,0,1
+FLOOR PLAN - FIRST FLOOR,Adaptive Points:Points,0,1
+FLOOR PLAN - FIRST FLOOR,Grid Heads,0,1
+FLOOR PLAN - FIRST FLOOR,Sections,0,1
+FLOOR PLAN - FIRST FLOOR,Room Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Room Tags:Dark room tag lines,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Wall Mullions,0,3
+FLOOR PLAN - FIRST FLOOR,Curtain Wall Mullions,1,5
+FLOOR PLAN - FIRST FLOOR,Curtain Wall Mullions:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Wall Mullions:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Stair Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Signage Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Loads:Area Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Loads:Point Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Loads:Line Loads,0,1
+FLOOR PLAN - FIRST FLOOR,Revision Cloud Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Walls,0,1
+FLOOR PLAN - FIRST FLOOR,Walls,1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Substrate [2],0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Substrate [2],1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Finish 2 [5],0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Finish 2 [5],1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Non-Core Layers,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:Non-Core Layers,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:Finish 1 [4],0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Finish 1 [4],1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Common Edges,0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Common Edges,1,2
+FLOOR PLAN - FIRST FLOOR,Walls:Surface Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:Surface Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:Curtain Wall Grids,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:TILE,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:TILE,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:Wall Sweeps,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:Wall Sweeps,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:Cut Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Walls:Cut Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Walls:Membrane Layer,0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Membrane Layer,1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Thermal/Air Layer [3],0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Thermal/Air Layer [3],1,5
+FLOOR PLAN - FIRST FLOOR,Walls:Structure [1],0,2
+FLOOR PLAN - FIRST FLOOR,Walls:Structure [1],1,5
+FLOOR PLAN - FIRST FLOOR,Conduit Runs,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Accessory Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Spot Slopes,0,1
+FLOOR PLAN - FIRST FLOOR,Keynote Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Space Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Alignments,0,3
+FLOOR PLAN - FIRST FLOOR,Alignments,1,3
+FLOOR PLAN - FIRST FLOOR,Bridge Cable Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Rebar Set Toggle,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Color Fill Legends,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Fittings,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Fittings:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Columns,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Columns,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Rigid Links,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Rigid Links,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Columns:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Stick Symbols,0,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Stick Symbols,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Location Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Location Lines,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Hidden Faces,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Columns:Hidden Faces,1,1
+FLOOR PLAN - FIRST FLOOR,Pipe Placeholders,0,1
+FLOOR PLAN - FIRST FLOOR,Guide Grid,0,1
+FLOOR PLAN - FIRST FLOOR,Grids,0,1
+FLOOR PLAN - FIRST FLOOR,Grids:Multi-segmented Grid,0,1
+FLOOR PLAN - FIRST FLOOR,Fire Alarm Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Planting Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Callouts,0,1
+FLOOR PLAN - FIRST FLOOR,Schedule Graphics,0,1
+FLOOR PLAN - FIRST FLOOR,Electrical Fixture Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Telephone Device Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Rebar Couplers,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Rebar Couplers:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Trays,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Trays:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Trays:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,Cable Trays:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain System Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Stiffeners,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Stiffeners,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Stiffeners:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Stiffeners:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Medical Equipment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Entourage,0,3
+FLOOR PLAN - FIRST FLOOR,Entourage:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework:Center Line,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework:Drop,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework:Rise,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework:Symbology,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework:Insulation,0,1
+FLOOR PLAN - FIRST FLOOR,Internal Line Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Deck Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Mass Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Zone Equipment,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Node Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Expansion Joint Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Property Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Path Reinforcement Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Water Loops,0,1
+FLOOR PLAN - FIRST FLOOR,Callout Boundary,0,6
+FLOOR PLAN - FIRST FLOOR,Callout Boundary:Callout Leader Line,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Area Reinforcement Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Contour Labels,0,1
+FLOOR PLAN - FIRST FLOOR,Nurse Call Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Wall Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Areas,0,1
+FLOOR PLAN - FIRST FLOOR,Areas:Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Areas:Reference,0,1
+FLOOR PLAN - FIRST FLOOR,Areas:Interior Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Materials,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs,0,3
+FLOOR PLAN - FIRST FLOOR,Roofs,1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Interior Edges,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Interior Edges,1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Substrate [2],0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Substrate [2],1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Roof Soffits,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Roof Soffits,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Finish 2 [5],0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Finish 2 [5],1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Curtain Roof Grids,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Finish 1 [4],0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Finish 1 [4],1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Common Edges,0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Common Edges,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Surface Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Surface Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Fascias,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Fascias,1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Cut Pattern,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Cut Pattern,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Gutters,0,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Gutters,1,1
+FLOOR PLAN - FIRST FLOOR,Roofs:Membrane Layer,0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Membrane Layer,1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Thermal/Air Layer [3],0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Thermal/Air Layer [3],1,5
+FLOOR PLAN - FIRST FLOOR,Roofs:Structure [1],0,2
+FLOOR PLAN - FIRST FLOOR,Roofs:Structure [1],1,5
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Areas,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Areas,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Areas:Boundary,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Areas:Boundary,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Rebar,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Rebar,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Rebar:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Rebar:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Reference Points,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Points:Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Points:Planes,0,1
+FLOOR PLAN - FIRST FLOOR,Reference Points:Points,0,1
+FLOOR PLAN - FIRST FLOOR,Shaft Openings,0,3
+FLOOR PLAN - FIRST FLOOR,Shaft Openings:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Vertical Circulation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Spot Elevation Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Wall Mullion Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Internal Point Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Isolated Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Flex Pipe Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Fittings,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Fittings:Center line,0,1
+FLOOR PLAN - FIRST FLOOR,Cameras,0,1
+FLOOR PLAN - FIRST FLOOR,Elevations,0,1
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment,0,3
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment:Soap Dispenser,0,1
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment:Toilet Accessories,0,1
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment:Paper Towel Dispenser,0,1
+FLOOR PLAN - FIRST FLOOR,Specialty Equipment:Toilet Accessories-Dashed,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Floor Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Accessories,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_Anno_bubble,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_REF BOX,0,3
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_GROUND,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_HATCH,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_Entourage Light,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_DIM,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_Entourgae Medium,0,3
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_WALL,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_Entourage Dark,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:0,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_TEXT 2_,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_DOOR_,0,3
+FLOOR PLAN - FIRST FLOOR,G306.dwg:A-VIEWPORT DNP,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_TEXT,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:Defpoints,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_DASHED,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_DOOR SWING,0,1
+FLOOR PLAN - FIRST FLOOR,G306.dwg:H_CUT,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Connection Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Masking Region,0,1
+FLOOR PLAN - FIRST FLOOR,Expansion Joints,0,1
+FLOOR PLAN - FIRST FLOOR,Expansion Joints,1,1
+FLOOR PLAN - FIRST FLOOR,Expansion Joints:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Expansion Joints:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Rebar Coupler Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Vibration Isolator Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Foundations,0,3
+FLOOR PLAN - FIRST FLOOR,Structural Foundations,1,5
+FLOOR PLAN - FIRST FLOOR,Structural Foundations:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Foundations:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Level Heads,0,1
+FLOOR PLAN - FIRST FLOOR,Road Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Color Fill Legends,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Beams,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Beams:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Beams:Start Segment,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Beams:End Segment,0,5
+FLOOR PLAN - FIRST FLOOR,Pier Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Curtain Grids,0,1
+FLOOR PLAN - FIRST FLOOR,Path of Travel Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Levels,0,1
+FLOOR PLAN - FIRST FLOOR,Brace in Plan View Symbols,0,1
+FLOOR PLAN - FIRST FLOOR,Railing Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Foundation Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Wire Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Security Devices,0,1
+FLOOR PLAN - FIRST FLOOR,Site Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Food Service Equipment,0,1
+FLOOR PLAN - FIRST FLOOR,Food Service Equipment,1,1
+FLOOR PLAN - FIRST FLOOR,Food Service Equipment:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Food Service Equipment:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Pipe Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Weld Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Link Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Spot Coordinates,0,1
+FLOOR PLAN - FIRST FLOOR,Bearings,0,1
+FLOOR PLAN - FIRST FLOOR,Bearings,1,1
+FLOOR PLAN - FIRST FLOOR,Bearings:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Bearings:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Railings,0,3
+FLOOR PLAN - FIRST FLOOR,Railings,1,5
+FLOOR PLAN - FIRST FLOOR,Railings:Terminations,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Terminations,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Handrails,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Handrails,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:Balusters,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Balusters,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:Top Rails,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Top Rails,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Railings Cut Line,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Railings Cut Line,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Top Rails,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:<Above> Top Rails,1,1
+FLOOR PLAN - FIRST FLOOR,Railings:Rails,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Rails,1,5
+FLOOR PLAN - FIRST FLOOR,Railings:Supports,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Supports,1,5
+FLOOR PLAN - FIRST FLOOR,Railings:Handrails,0,1
+FLOOR PLAN - FIRST FLOOR,Railings:Handrails,1,1
+FLOOR PLAN - FIRST FLOOR,Abutment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:-11 - DASHED 1/16" - FINE,0,2
+FLOOR PLAN - FIRST FLOOR,Title Blocks:02 Dashed 1/16,0,2
+FLOOR PLAN - FIRST FLOOR,Title Blocks:TB-TX,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:<Medium Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:<Wide Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:TB,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:1 Dashed 1/16,0,2
+FLOOR PLAN - FIRST FLOOR,Title Blocks:MCA_BoldRed,0,13
+FLOOR PLAN - FIRST FLOOR,Title Blocks:DEFPOINTS,0,1
+FLOOR PLAN - FIRST FLOOR,Title Blocks:02 Dash 1/16,0,2
+FLOOR PLAN - FIRST FLOOR,Title Blocks:<Thin Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Shear Stud Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Pile Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Plumbing Fixture Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Tower Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Pipe Fitting Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths:UP Text,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths:DOWN Text,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths:Down Arrows,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths:<Above> Up Arrows,0,1
+FLOOR PLAN - FIRST FLOOR,Stair Paths:Up Arrows,0,1
+FLOOR PLAN - FIRST FLOOR,MEP Fabrication Pipework Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Multi Leader Tag,0,1
+FLOOR PLAN - FIRST FLOOR,Bridge Framing Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Duct Linings,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Beam Systems,0,3
+FLOOR PLAN - FIRST FLOOR,Roof Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Views,0,1
+FLOOR PLAN - FIRST FLOOR,Sheets,0,1
+FLOOR PLAN - FIRST FLOOR,Casework,0,1
+FLOOR PLAN - FIRST FLOOR,Casework,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Hidden,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Hidden,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_FullHeight,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_FullHeight,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:Glass,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Glass,1,1
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_Upper,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_Upper,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:Plan Rep - Above,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Plan Rep - Above,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:<Hidden Lines>,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_Lower,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Cabinet_Lower,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Wall,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Wall,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_UnderCabinetLighting,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_UnderCabinetLighting,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:Sink Opening,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Sink Opening,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:Plan Rep - Below,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Plan Rep - Below,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:Elevation Swing,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:Elevation Swing,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Swing,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Swing,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:Counter Top,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Counter Top,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Base,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Base,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet - Panel,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet - Panel,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Zero,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet,0,1
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet,1,1
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Finish,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Finish,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Hardware,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Hardware,1,5
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Glass,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Glass,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet - Wood Door / Drawer,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:Cabinet - Wood Door / Drawer,1,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Countertop,0,3
+FLOOR PLAN - FIRST FLOOR,Casework:MCA_Countertop,1,5
+FLOOR PLAN - FIRST FLOOR,Conduit Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Point Load Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces:Opening,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces:Underground,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces:Interior,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces:Exterior,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Surfaces:Shades,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Fabric Reinforcement Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Material Tags,0,1
+FLOOR PLAN - FIRST FLOOR,View Titles,0,1
+FLOOR PLAN - FIRST FLOOR,Mechanical Equipment,0,3
+FLOOR PLAN - FIRST FLOOR,Mechanical Equipment:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Parking Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Beam System Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Alignment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Brace Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Alignment Station Label Sets,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Tendons,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Tendons,1,1
+FLOOR PLAN - FIRST FLOOR,Structural Tendons:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Structural Tendons:<Hidden Lines>,1,1
+FLOOR PLAN - FIRST FLOOR,Electrical Equipment Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Generic Model Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Switch System,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:MCA_Hidden,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:Overhead Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture:<Hidden Lines>,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:MCA_Tertiary,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:Linien verdeckt,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:Herman Miller - Hidden Lines,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:HAY - table,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:HAY - Desk,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:Herman Miller - Seat,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:MCA_Zero,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture:Chairs,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:MCA_Primary,0,5
+FLOOR PLAN - FIRST FLOOR,Furniture:MCA_Secondary,0,1
+FLOOR PLAN - FIRST FLOOR,Furniture:Hidden Lines,0,5
+FLOOR PLAN - FIRST FLOOR,Rooms,0,1
+FLOOR PLAN - FIRST FLOOR,Rooms:Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Rooms:Reference,0,1
+FLOOR PLAN - FIRST FLOOR,Rooms:Interior Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Hardscape,0,1
+FLOOR PLAN - FIRST FLOOR,Hardscape,1,5
+FLOOR PLAN - FIRST FLOOR,Hardscape:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Hardscape:<Hidden Lines>,1,3
+FLOOR PLAN - FIRST FLOOR,Coordination Model,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Walls,0,5
+FLOOR PLAN - FIRST FLOOR,Analytical Walls:Local Coordinate System,0,5
+FLOOR PLAN - FIRST FLOOR,Hardscape Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs,0,3
+FLOOR PLAN - FIRST FLOOR,Stairs,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:Outlines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Outlines,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Hidden Lines>,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:Cut Marks,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Cut Marks,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Outlines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Outlines,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Nosing Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Nosing Lines,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:Riser Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Riser Lines,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:Treads/Risers,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Treads/Risers,1,5
+FLOOR PLAN - FIRST FLOOR,Stairs:Supports,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Supports,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Landings,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Landings,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Nosing Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Nosing Lines,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Runs,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:Runs,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Supports,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Supports,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Cut Marks,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Cut Marks,1,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Riser Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Stairs:<Above> Riser Lines,1,1
+FLOOR PLAN - FIRST FLOOR,Text Notes,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_2.00mm - Dashed,0,16
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.70mm - Dashed,0,13
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_1.00mm - Dashed,0,14
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Blindside Sheet - Vertical,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Thermoplastic-Polulefin (TPO) Roofing,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_1.40mm - Dashed,0,15
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.13mm - Dashed,0,8
+FLOOR PLAN - FIRST FLOOR,Detail Items:<Hidden Lines>,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_2.00mm - Solid,0,16
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Self-Adhering Sheet Air & Water Barrier,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Fluid-Injected Composite,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_04_Medium,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_Invisible,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Metal Roof and Wall Panels,0,2
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_ADA,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Blindside Sheet - Horizontal,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.35mm - Dashed,0,11
+FLOOR PLAN - FIRST FLOOR,Detail Items:2 - Light,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:Heavy Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.25mm - Dashed,0,10
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_03_Fine,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.18mm - Solid,0,9
+FLOOR PLAN - FIRST FLOOR,Detail Items:FLASHING,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.13mm - Solid,0,8
+FLOOR PLAN - FIRST FLOOR,Detail Items:0,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.50mm - Dashed,0,12
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Metal Fascia & Soffit Panels 1,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_Swing,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_06_ExtraHeavy,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:_PW_BreakLine,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.70mm - Solid,0,13
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.35mm - Solid,0,11
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_Zero,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_05_Heavy,0,3
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.50mm - Solid,0,12
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.25mm - Solid,0,10
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_1.00mm - Solid,0,14
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_0.18mm - Dashed,0,9
+FLOOR PLAN - FIRST FLOOR,Detail Items:MCA_1.40mm - Solid,0,15
+FLOOR PLAN - FIRST FLOOR,Detail Items:Waterproofing - Metal Fascia and Soffit Panels 2,0,2
+FLOOR PLAN - FIRST FLOOR,Detail Items:Medium Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:Det_03_XFine,0,5
+FLOOR PLAN - FIRST FLOOR,Detail Items:4 - Heavy,0,1
+FLOOR PLAN - FIRST FLOOR,Detail Items:Light Lines,0,1
+FLOOR PLAN - FIRST FLOOR,Spot Elevations,0,1
+FLOOR PLAN - FIRST FLOOR,Analytical Nodes,0,5
+FLOOR PLAN - FIRST FLOOR,G305.dwg,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_Anno_bubble,0,3
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_REF BOX,0,3
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_GROUND,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_HATCH,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_Entourage Light,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_DIM,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_Entourgae Medium,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_WALL,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_Entourage Dark,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:0,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_TEXT 2_,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_DOOR_,0,3
+FLOOR PLAN - FIRST FLOOR,G305.dwg:A-VIEWPORT DNP,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_TEXT,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:Defpoints,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_DASHED,0,1
+FLOOR PLAN - FIRST FLOOR,G305.dwg:H_CUT,0,1
+FLOOR PLAN - FIRST FLOOR,Boundary Conditions,0,1
+FLOOR PLAN - FIRST FLOOR,Color Fill Legends,0,1
+FLOOR PLAN - FIRST FLOOR,Spaces,0,1
+FLOOR PLAN - FIRST FLOOR,Spaces:Color Fill,0,1
+FLOOR PLAN - FIRST FLOOR,Spaces:Reference,0,1
+FLOOR PLAN - FIRST FLOOR,Spaces:Interior,0,1
+FLOOR PLAN - FIRST FLOOR,Pier Cap Tags,0,1
+FLOOR PLAN - FIRST FLOOR,Dimensions,0,1
+FLOOR PLAN - FIRST FLOOR,Dimensions:Automatic Sketch Dimensions,0,1
