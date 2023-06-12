@@ -7,11 +7,7 @@ from torch.nn import functional as F
 from torch.utils.data import Dataset
 
 # hyperparameters
-batch_size = 8 # how many independent sequences will we process in parallel?
-block_size = 4
-max_iters = 5000
-eval_interval = 100
-eval_iters = 200
+block_size = 8
 half_embd = 64
 n_head = 4
 n_layer = 4
@@ -101,23 +97,23 @@ class VisibilityModel(nn.Module):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
     def forward(self, device, A, B, C, targets = None):
-        Batch1, T1 = A.shape
-        tok_emb1 = self.name_token_embedding_table(A)
-        pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device))
-        Batch2, T2 = B.shape
-        tok_emb2 = self.cat_token_embedding_table(B)
-        pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device))
-        x1 = tok_emb1 + pos_emb1
-        x2 = tok_emb2 + pos_emb2
-        x = torch.cat([x1, x2], dim=-1)
-        x = self.first_block(x)
-        x = torch.sum(x, dim=-2, keepdim=False)
+        Batch1, T1 = A.shape #shape is 8, 64
+        tok_emb1 = self.name_token_embedding_table(A) #shape is 8, 64, 64
+        pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device)) #shape is 64, 64
+        Batch2, T2 = B.shape #shape is 8, 64
+        tok_emb2 = self.cat_token_embedding_table(B) #shape is 8, 64, 64
+        pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device)) #shape is 64, 64
+        x1 = tok_emb1 + pos_emb1 #shape is 8, 64, 64
+        x2 = tok_emb2 + pos_emb2 #shape is 8, 64, 64
+        x = torch.cat([x1, x2], dim=-1) #shape is 8, 64, 128
+        x = self.first_block(x) #shape is 8, 64, 128
+        x = torch.sum(x, dim=-2, keepdim=False) #shape is 8, 128
 
         cutSurf_x = self.cutSurf_head(C)
         x = torch.cat([x, cutSurf_x], dim=-1)
         x = self.blocks(x)
         x = self.ln_f(x)
-        logits = self.lm_head(x)
+        logits = self.lm_head(x) #shape is 8, 17
 
         if targets is None:
             loss = None
