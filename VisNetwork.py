@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
-block_size = 64
+block_size = 4
 max_iters = 5000
 eval_interval = 100
 eval_iters = 200
