@@ -7,7 +7,7 @@ from torch.nn import functional as F
 from torch.utils.data import Dataset
 
 # hyperparameters
-block_size = 32
+block_size = 64
 half_embd = 64
 n_head = 4
 n_layer = 4
@@ -19,17 +19,15 @@ def get_Sample(input, printSample=False):
     lines = input.split(',')
     line = lines[0]
     line2 = lines[1]
-    sample = [len(line), block_size]
-    catName = [len(line), block_size]
+    sample = [0] * block_size
+    catName = [0] * block_size
     cutSurf = [0]
-    for i in range(len(line)):
-        for j in range(block_size):
-            try : sample[i, j] = Alpha.chars.index(line[i + j])
-            except : sample[i, j] = 0
-    for i in range(len(line2)):
-        for j in range(block_size):
-            try : catName[i, j] = Alpha.chars.index(line2[i + j])
-            except : catName[i, j] = 0
+    for i in range(block_size):
+        try : sample[i] = Alpha.chars.index(line[i])
+        except : pass
+    for i in range(block_size):
+        try : catName[i] = Alpha.chars.index(line2[i])
+        except : pass
     try :
         cutSurf[0] = int(lines[2]) - 1
     except :
@@ -61,7 +59,7 @@ class VisibilityDataset(Dataset):
         self.chars = Alpha.chars
         self.max_len = block_size
         for line in lines:
-            name, category, gtype, sample = get_Samples(line)
+            name, category, gtype, sample = get_Sample(line)
             self.data.append([name, category, gtype, sample])
         self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
     
