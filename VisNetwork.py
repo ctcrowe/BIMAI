@@ -19,19 +19,17 @@ def get_Sample(input, printSample=False):
     lines = input.split(',')
     line = lines[0]
     line2 = lines[1]
-    sample = [0] * block_size
-    catName = [0] * block_size
+    sample = [len(line), block_size]
+    catName = [len(line), block_size]
     cutSurf = [0]
     for i in range(len(line)):
-        try :
-            sample[i] = Alpha.chars.index(line[i])
-        except :
-            pass
+        for j in range(block_size):
+            try : sample[i, j] = Alpha.chars.index(line[i + j])
+            except : sample[i, j] = 0
     for i in range(len(line2)):
-        try :
-            catName[i] = Alpha.chars.index(line2[i])
-        except :
-            pass
+        for j in range(block_size):
+            try : catName[i, j] = Alpha.chars.index(line2[i + j])
+            except : catName[i, j] = 0
     try :
         cutSurf[0] = int(lines[2]) - 1
     except :
