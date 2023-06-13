@@ -13,19 +13,6 @@ n_head = 4
 n_layer = 4
 dropout = 0.2
 # ------------
-def get_Samples(input, printSample = False):
-    lines = input.split(',')
-    line = lines[0]
-    line2 = lines[1]
-    line3 = lines[2]
-    line4 = lines[3]
-    set = []
-    for i in range(len(line)):
-        for j in range(len(line2)):
-            newline = line[i:] + "," + line2[j:] + "," + line3 + "," + line4
-            set.append(get_Sample(newline))
-    return set
-
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
