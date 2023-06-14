@@ -100,6 +100,7 @@ class VisibilityModel(nn.Module):
         tok_emb2 = self.cat_token_embedding_table(B) #shape is 8, 64, 64
         pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device)) #shape is 64, 64
         x1 = tok_emb1 + pos_emb1 #shape is 8, 64, 64
+        print(x1.shape)
         x2 = tok_emb2 + pos_emb2 #shape is 8, 64, 64
         x = torch.cat([x1, x2], dim=-1) #shape is 8, 64, 128
         x = self.first_block(x) #shape is 8, 64, 128

@@ -7,25 +7,28 @@ from torch.nn import functional as F
 from torch.utils.data import Dataset
 
 # hyperparameters
-block_size = 64
-half_embd = 64
+external_block_size = 256
+internal_block_size = 8
+half_embd = 32
 n_head = 4
 n_layer = 4
 dropout = 0.2
 # ------------
+
+
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
     lines = input.split(',')
     line = lines[0]
     line2 = lines[1]
-    sample = [0] * block_size
-    catName = [0] * block_size
+    sample = [0] * external_block_size
+    catName = [0] * external_block_size
     cutSurf = [0]
-    for i in range(block_size):
+    for i in range(external_block_size):
         try : sample[i] = Alpha.chars.index(line[i])
         except : pass
-    for i in range(block_size):
+    for i in range(external_block_size):
         try : catName[i] = Alpha.chars.index(line2[i])
         except : pass
     try :
@@ -57,7 +60,7 @@ class VisibilityDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
-        self.max_len = block_size
+        self.max_len = external_block_size
         for line in lines:
             name, category, gtype, sample = get_Sample(line)
             self.data.append([name, category, gtype, sample])
@@ -74,11 +77,11 @@ class VisibilityModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.name_token_embedding_table = nn.Embedding(len(Alpha.chars), half_embd)
-        self.name_position_embedding_table = nn.Embedding(block_size, half_embd)
+        self.name_position_embedding_table = nn.Embedding(external_block_size, half_embd) #replace with internal_block_size when prepared
         self.cat_token_embedding_table = nn.Embedding(len(Alpha.chars), half_embd)
-        self.cat_position_embedding_table = nn.Embedding(block_size, half_embd)
+        self.cat_position_embedding_table = nn.Embedding(external_block_size, half_embd) #replace with internal_block_size when prepared
         self.cutSurf_head = nn.Linear(1, half_embd, dtype = torch.float)
-        self.first_block = timed.TimedBlock(2 * half_embd, n_head=n_head, block_size=block_size)
+        self.first_block = timed.TimedBlock(2 * half_embd, n_head=n_head, block_size=external_block_size) #replace with internal_block_size when prepared
         self.blocks = nn.Sequential(*[static.Block(3 * half_embd, n_head = n_head) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(3 * half_embd)
         self.lm_head = nn.Linear(3 * half_embd, 17)
@@ -91,18 +94,23 @@ class VisibilityModel(nn.Module):
                 torch.nn.init.zeros_(module.bias)
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+
+    def FirstBlockPass(self, device, A, B):
+        Batch1, T1 = A.shape
+        name_tok_emb = self.name_token_embedding_table(A)
+        name_pos_emb = self.name_position_embedding_table(torch.arange(T1, device = device)) #shape is 64, 64
+        Batch2, T2 = B.shape #shape is 8, 64
+        cat_tok_emb = self.cat_token_embedding_table(B) #shape is 8, 64, 64
+        cat_pos_emb = self.cat_position_embedding_table(torch.arange(T2, device = device)) #shape is 64, 64
+
+        name = name_tok_emb + name_pos_emb #shape is 8, 256, 32
+        cat = cat_tok_emb + cat_pos_emb #shape is 8, 256, 32
+        x = torch.cat([name, cat], dim=-1)
+        x = self.first_block(x)
+        return x
     
     def forward(self, device, A, B, C, targets = None):
-        Batch1, T1 = A.shape #shape is 8, 64
-        tok_emb1 = self.name_token_embedding_table(A) #shape is 8, 64, 64
-        pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device)) #shape is 64, 64
-        Batch2, T2 = B.shape #shape is 8, 64
-        tok_emb2 = self.cat_token_embedding_table(B) #shape is 8, 64, 64
-        pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device)) #shape is 64, 64
-        x1 = tok_emb1 + pos_emb1 #shape is 8, 64, 64
-        x2 = tok_emb2 + pos_emb2 #shape is 8, 64, 64
-        x = torch.cat([x1, x2], dim=-1) #shape is 8, 64, 128
-        x = self.first_block(x) #shape is 8, 64, 128
+        x = self.FirstBlockPass(device, A, B) #shape is 8, 64, 64
         x = torch.sum(x, dim=-2, keepdim=False) #shape is 8, 128
 
         cutSurf_x = self.cutSurf_head(C)
