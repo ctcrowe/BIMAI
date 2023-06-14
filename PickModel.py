@@ -2,12 +2,12 @@ import IndexNetwork as indexNetwork
 import DetailTypeNetwork as detailTypeNetwork
 import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
-import VisNetwork as visNetwork
+import VisNetworkV2 as visNetwork
 
 def pick(text):
     if text == "Visibility":
         txt_path = "Datasets/VisibilityData.txt"
-        path = "Models/VisibilityNetwork.pt"
+        path = "Models/VisibilityNetworkV2.pt"
         model = visNetwork.VisibilityModel()
         testMdl = visNetwork.Test
         dataset = visNetwork.VisibilityDataset
