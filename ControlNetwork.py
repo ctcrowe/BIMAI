@@ -48,7 +48,7 @@ def Test(model, text, device):
     max = torch.argmax(logits)
     return list(class_map.keys())[max]
 
-class OLFDataset(Dataset):
+class CtrlDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
@@ -68,7 +68,7 @@ class OLFDataset(Dataset):
         data, class_name = self.data[idx]
         return data, class_name
     
-class OLFModel(nn.Module):
+class CtrlModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)

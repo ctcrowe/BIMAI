@@ -3,6 +3,7 @@ import DetailTypeNetwork as detailTypeNetwork
 import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
+import ControlNetwork as control
 
 def pick(text):
     if text == "Visibility":
@@ -11,6 +12,13 @@ def pick(text):
         model = visNetwork.VisibilityModel()
         testMdl = visNetwork.Test
         dataset = visNetwork.VisibilityDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "Control":
+        txt_path = "Datasets/ControlData.txt"
+        path = "Models/ControlNetwork.pt"
+        model = control.CtrlModel
+        testMdl = control.Test
+        dataset = control.CtrlDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Space Function":
         txt_path = "Datasets/SpaceFunctionNetworkData.txt"
