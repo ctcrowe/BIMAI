@@ -17,7 +17,7 @@ n_layer = 4
 dropout = 0.2
 # ------------
 
-class_map = {"TURN ON COLOR" : 0, "UPDATE COLOR SCHEME" : 1}
+class_map = {"TURN ON COLOR" : 0, "UPDATE COLOR SCHEME" : 1, "MOVE TREES" : 2}
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
