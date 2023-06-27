@@ -24,11 +24,12 @@ room_map = {"GREAT ROOM" : 0,
             "MASTER BATHROOM" : 4,
             "POWDER ROOM" : 5,
             "KITCHEN" : 6,
-            "DINING ROOM" : 7,
-            "STUDY" : 8,
-            "FAMILY ROOM" : 9,
-            "OFFICE" : 10,
-            "LAUNDRY" : 11}
+            "LIVING ROOM" : 7,
+            "DINING ROOM" : 8,
+            "STUDY" : 9,
+            "FAMILY ROOM" : 10,
+            "OFFICE" : 11,
+            "LAUNDRY" : 12}
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
@@ -118,7 +119,7 @@ class UnitLayoutModel(nn.Module):
 
     def forward(self, device, X, targets = None):
         B, T = X.shape
-        
+
 
 class VisibilityModel(nn.Module):
     
