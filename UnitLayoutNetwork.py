@@ -10,7 +10,9 @@ from torch.utils.data import Dataset
 block_size = 64
 embd_size = 64
 n_head = 4
-area_layers = 3
+input_layers = 2
+room_layers = 5
+area_layers = 4
 n_layer = 4
 dropout = 0.2
 # ------------
@@ -88,11 +90,23 @@ class UnitLayoutModel(nn.Module):
     def __init__(self):
         super().__init__()
         #First, we will cover the conversion from area to an embedding layer
-        self.area_basis = nn.Linear(1, embd_size, dtype = torch.float)
+        self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
+        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
+        self.input_ln_f = nn.LayerNorm(embd_size)
+        self.input_lm_head = nn.Linear(embd_size, embd_size - 16)
+
+        #Next we cover the conversion from a random embedding to an output embedding for future rooms in the unit.
+        self.room_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(room_layers)])
+        self.room_ln_f = nn.LayerNorm(embd_size)
+        self.room_lm_output = nn.Linear(embd_size, len(room_map))
+        self.room_lm_head = nn.Linear(embd_size, embd_size - 16)
+        self.apply(self.__init__weights)
+
+        #Next we cover calculation of the size of the next room.
         self.area_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(area_layers)])
         self.area_ln_f = nn.LayerNorm(embd_size)
-        self.area_lm_head = nn.Linear(embd_size, embd_size)
-        self.apply(self.__init__weights)
+        self.area_lm_output = nn.Linear(embd_size, 1)
+        self.area_lm_head = nn.Linear(embd_size, embd_size - 16)
 
     def __init__weights(self, module):
         if isinstance(module, nn.Linear):
@@ -101,28 +115,12 @@ class UnitLayoutModel(nn.Module):
                 torch.nn.init.zeros_(module.bias)
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+
+    def forward(self, device, X, targets = None):
+        B, T = X.shape
+        
 
 class VisibilityModel(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.name_token_embedding_table = nn.Embedding(len(Alpha.chars), half_embd)
-        self.name_position_embedding_table = nn.Embedding(block_size, half_embd)
-        self.cat_token_embedding_table = nn.Embedding(len(Alpha.chars), half_embd)
-        self.cat_position_embedding_table = nn.Embedding(block_size, half_embd)
-        self.cutSurf_head = nn.Linear(1, half_embd, dtype = torch.float)
-        self.first_block = timed.TimedBlock(2 * half_embd, n_head=n_head, block_size=block_size)
-        self.blocks = nn.Sequential(*[static.Block(3 * half_embd, n_head = n_head) for _ in range(n_layer)])
-        self.ln_f = nn.LayerNorm(3 * half_embd)
-        self.lm_head = nn.Linear(3 * half_embd, 17)
-        self.apply(self.__init__weights)
-
-    def __init__weights(self, module):
-        if isinstance(module, nn.Linear):
-            torch.nn.init.normal_(module.weight, mean = 0.0, std = 0.02)
-            if module.bias is not None:
-                torch.nn.init.zeros_(module.bias)
-        elif isinstance(module, nn.Embedding):
-            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
     
     def forward(self, device, A, B, C, targets = None):
         Batch1, T1 = A.shape #shape is 8, 64
