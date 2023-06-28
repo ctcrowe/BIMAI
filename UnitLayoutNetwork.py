@@ -133,7 +133,7 @@ class UnitInputModel(nn.Module):
             loss_targets = loss_targets.view(Y, len(class_map.items()))
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
-        return logits, loss
+        return logits, loss, Z
 
 class UnitLayoutModel(nn.Module):
     def __init__(self):
