@@ -87,6 +87,29 @@ class VisibilityDataset(Dataset):
         name, category, gtype, output = self.data[idx]
         return name, category, gtype, output
 
+class UnitInputModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
+        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
+        self.input_ln_f = nn.LayerNorm(embd_size)
+        self.input_lm_head = nn.Linear(embd_size, embd_size - 16)
+
+        self.room_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(room_layers)])
+        self.room_ln_f = nn.LayerNorm(embd_size)
+        self.room_lm_output = nn.Linear(embd_size, len(room_map))
+        self.room_lm_head = nn.Linear(embd_size, embd_size - 16)
+        self.apply(self.__init__weights)
+
+    def __init__weights(self, module):
+        if isinstance(module, nn.Linear):
+            torch.nn.init.normal_(module.weight, mean = 0.0, std = 0.02)
+            if module.bias is not None:
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+
+
 class UnitLayoutModel(nn.Module):
     def __init__(self):
         super().__init__()
