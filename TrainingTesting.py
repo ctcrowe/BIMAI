@@ -51,7 +51,7 @@ def RunTraining(dataset):
 while True:
     datatype = input("Network Type?")
     if datatype != "Unit":
-        txt_path, path, model, testMdl, dataset = pick(input("Network Type?"))
+        txt_path, path, model, testMdl, dataset = pick(datatype)
         if model is not None:
             if os.path.isfile(path):
                 statedict = torch.load(path)
