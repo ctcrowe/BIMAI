@@ -129,8 +129,8 @@ class UnitInputModel(nn.Module):
         else:
             Y, Z = logits.shape
             logits = logits.view(Y, Z)
-            loss_targets = torch.nn.functional.one_hot(targets, 17)
-            loss_targets = loss_targets.view(Y, 17)
+            loss_targets = torch.nn.functional.one_hot(targets, len(class_map.items()))
+            loss_targets = loss_targets.view(Y, len(class_map.items()))
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
         return logits, loss
