@@ -109,6 +109,31 @@ class UnitInputModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
+    def forward(self, device, X, targets = None):
+        B, T = X.shape
+        x = self.input_basis(B)
+        x = self.input_blocks(x)
+        x = self.input_ln_f(x)
+        x = self.input_lm_head(x)
+
+        y = torch.rand(n_head, 16, dtype = torch.float)
+        
+        z = torch.cat(x, y)
+        z = self.room_blocks(z)
+        z = self.room_lm_output(z)
+        output_room_name = self.room_lm_output(z)
+        logits = self.room_lm_head(z)
+
+        if targets is None:
+            loss = None
+        else:
+            Y, Z = logits.shape
+            logits = logits.view(Y, Z)
+            loss_targets = torch.nn.functional.one_hot(targets, 17)
+            loss_targets = loss_targets.view(Y, 17)
+            loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
+
+        return logits, loss
 
 class UnitLayoutModel(nn.Module):
     def __init__(self):
