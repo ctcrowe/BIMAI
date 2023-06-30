@@ -5,7 +5,7 @@ import NNets.DataLoading as dataLoading
 from PickModel import pick
 
 # hyperparameters
-batch_size = 8 # how many independent sequences will we process in parallel?
+batch_size = 2 # how many independent sequences will we process in parallel?
 learning_rate = 3e-6
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
