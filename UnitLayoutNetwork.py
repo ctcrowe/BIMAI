@@ -8,82 +8,62 @@ from torch.utils.data import Dataset
 
 # hyperparameters
 block_size = 32
-embd_size = 64
+embd_size = 32
 n_head = 4
 input_layers = 2
-room_layers = 5
-area_layers = 4
+room_layers = 4
 n_layer = 4
 dropout = 0.2
 # ------------
 
-room_list = ["", "GREAT ROOM", "BEDROOM", "MASTER BEDROOM", "BATHROOM", "MASTER BATHROOM", "POWDER ROOM", "KITCHEN", "LIVING ROOM", "DINING ROOM", "STUDY", "FAMILY ROOM", "OFFICE", "LAUNDRY", "DEN"]
+room_list = ["NULL", "GREAT ROOM", "BEDROOM", "MASTER BEDROOM", "BATHROOM", "MASTER BATHROOM", "POWDER ROOM", "KITCHEN",
+             "KITCHEN / LIVING", "LIVING ROOM", "DINING ROOM", "STUDY", "FAMILY ROOM", "OFFICE", "LAUNDRY", "DEN", "CLOSET", "PANTRY"]
 data_map = { s:i for i,s in enumerate(room_list) }
-room_map = { i:s for i,s in enumerate(room_list) }
 
 encode = lambda s : [data_map[word] for word in s.strip().upper().split(',')[1:]]
-decode = lambda l : ''.join([room_map
 
-#might be able to remove get_Samples entirely with encode / decode structure
 def get_Samples(input):
     samples = []
-    input = input.strip().upper()
-    lines = input.split(',')
-    for i in range(len(lines) - 2):
-        newSample = [0] * block_size
-        newSample[0] = float(lines[0])
-        for j in range(block_size - 1):
-            try : newSample[i + 1] = room_map[lines[i]]
-            except : newSample[i + 1] = 0
-    line = lines[0]
-    line2 = lines[1]
-    sample = [0] * block_size
-    catName = [0] * block_size
-    cutSurf = [0]
-            
-    return torch.tensor(sample), torch.tensor(catName), torch.tensor(cutSurf, dtype = torch.float), torch.tensor(classification)
+    input_encoding = encode(input)
+    input_area = long(input.split(',')[0])
+    for i in range(len(input_encoding) - 2):
+        samples.append([torcg.tensor(input_area), torch.tensor(input_encoding[:i]), torch.tensor(input_encoding[i+1]))
+        
+    return samples
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
-    A, B, C, D = sample
+    A, B, C = sample
     A = A.view(1, -1)
     B = B.view(1, -1)
-    C = C.view(1, -1)
-    print(A, B)
-    logits, loss = model(device, A, B, C)
+    logits, loss = model(device, A, B)
     print(logits)
     max = torch.argmax(logits)
-    return str(max.item())
+    return room_list[max]
 
 class UnitRoomsDataset(Dataset):
     def __init__(self, lines):
         self.data = []
-        self.chars = Alpha.chars
-        self.max_len = block_size
         for line in lines:
-            [name, category, gtype, sample] = get_Samples(line)
-            self.data.append([name, category, gtype, sample])
-        self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
+            self.data.extend(get_Samples(line))
     
     def __len__(self):
         return len(self.data)
     
     def __getitem__(self, idx):
-        name, category, gtype, output = self.data[idx]
-        return name, category, gtype, output
+        area, rooms, output = self.data[idx]
+        return area, rooms, output
 
-class UnitInputModel(nn.Module):
+class UnitRoomsModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
-        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
-        self.input_ln_f = nn.LayerNorm(embd_size)
-        self.input_lm_head = nn.Linear(embd_size, embd_size - 16)
-
-        self.room_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(room_layers)])
-        self.room_ln_f = nn.LayerNorm(embd_size)
-        self.room_lm_output = nn.Linear(embd_size, len(room_map))
-        self.room_lm_head = nn.Linear(embd_size, embd_size - 16)
+        self.input_basis = nn.Linear(1, embd_size - 4, dtype = torch.float)
+        self.input_blocks = nn.Sequential(*[static.Block(embd_size - 4, n_head = n_head) for _ in range(input_layers)])
+        self.room_token_embedding_table = nn.Embedding(len(room_list), embd_size)
+        self.room_position_embedding_table = nn.Embedding(block_size, embd_size)
+        self.room_blocks = nn.Sequential(*[timed.TimedBlock(2 * embd_size, n_head = n_head) for _ in range(room_layers)])
+        self.ln_f = nn.LayerNorm(2 * embd_size)
+        self.lm_head = nn.Linear(2 * embd_size, len(room_list))
         self.apply(self.__init__weights)
 
     def __init__weights(self, module):
@@ -94,94 +74,28 @@ class UnitInputModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
-    def forward(self, device, X, targets = None):
+    def forward(self, device, X, Y, targets = None):
         B, T = X.shape
         x = self.input_basis(B)
         x = self.input_blocks(x)
-        x = self.input_ln_f(x)
-        x = self.input_lm_head(x)
-
-        y = torch.rand(n_head, 16, dtype = torch.float)
-        
-        z = torch.cat(x, y)
-        z = self.room_blocks(z)
-        z = self.room_lm_output(z)
-        output_room_name = self.room_lm_output(z)
-        logits = self.room_lm_head(z)
-
-        if targets is None:
-            loss = None
-        else:
-            Y, Z = logits.shape
-            logits = logits.view(Y, Z)
-            loss_targets = torch.nn.functional.one_hot(targets, len(class_map.items()))
-            loss_targets = loss_targets.view(Y, len(class_map.items()))
-            loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
-
-        return logits, loss, Z
-
-class UnitLayoutModel(nn.Module):
-    def __init__(self):
-        super().__init__()
-        #First, we will cover the conversion from area to an embedding layer
-        self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
-        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
-        self.input_ln_f = nn.LayerNorm(embd_size)
-        self.input_lm_head = nn.Linear(embd_size, embd_size - 16)
-
-        #Next we cover the conversion from a random embedding to an output embedding for future rooms in the unit.
-        self.room_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(room_layers)])
-        self.room_ln_f = nn.LayerNorm(embd_size)
-        self.room_lm_output = nn.Linear(embd_size, len(room_map))
-        self.room_lm_head = nn.Linear(embd_size, embd_size - 16)
-        self.apply(self.__init__weights)
-
-        #Next we cover calculation of the size of the next room.
-        self.area_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(area_layers)])
-        self.area_ln_f = nn.LayerNorm(embd_size)
-        self.area_lm_output = nn.Linear(embd_size, 1)
-        self.area_lm_head = nn.Linear(embd_size, embd_size - 16)
-
-    def __init__weights(self, module):
-        if isinstance(module, nn.Linear):
-            torch.nn.init.normal_(module.weight, mean = 0.0, std = 0.02)
-            if module.bias is not None:
-                torch.nn.init.zeros_(module.bias)
-        elif isinstance(module, nn.Embedding):
-            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
-
-    def forward(self, device, X, targets = None):
-        B, T = X.shape
-
-
-class VisibilityModel(nn.Module):
-    
-    def forward(self, device, A, B, C, targets = None):
-        Batch1, T1 = A.shape #shape is 8, 64
-        tok_emb1 = self.name_token_embedding_table(A) #shape is 8, 64, 64
-        pos_emb1 = self.name_position_embedding_table(torch.arange(T1, device = device)) #shape is 64, 64
-        Batch2, T2 = B.shape #shape is 8, 64
-        tok_emb2 = self.cat_token_embedding_table(B) #shape is 8, 64, 64
-        pos_emb2 = self.cat_position_embedding_table(torch.arange(T2, device = device)) #shape is 64, 64
-        x1 = tok_emb1 + pos_emb1 #shape is 8, 64, 64
-        x2 = tok_emb2 + pos_emb2 #shape is 8, 64, 64
-        x = torch.cat([x1, x2], dim=-1) #shape is 8, 64, 128
-        x = self.first_block(x) #shape is 8, 64, 128
-        x = torch.sum(x, dim=-2, keepdim=False) #shape is 8, 128
-
-        cutSurf_x = self.cutSurf_head(C)
-        x = torch.cat([x, cutSurf_x], dim=-1)
-        x = self.blocks(x)
+        y = torch.rand(n_head, 4, dtype = torch.float)
+        x = torch.cat(x, y)
+        B, T = Y.shape
+        tok_emb = self.room_token_embedding_table(Y)
+        pos_emb = self.room_position_embedding_table(torch.arange(T, device = device))
+        emb = tok_emb + pos_emb
+        x = torch.cat(x, emb)
+        x = self.room_blocks(x)
         x = self.ln_f(x)
-        logits = self.lm_head(x) #shape is 8, 17
+        logits = self.lm_head(x)
 
         if targets is None:
             loss = None
         else:
-            Y, Z = logits.shape
-            logits = logits.view(Y, Z)
-            loss_targets = torch.nn.functional.one_hot(targets, 17)
-            loss_targets = loss_targets.view(Y, 17)
+            B, C = logits.shape
+            logits = logits.view(B, C)
+            loss_targets = torch.nn.functional.one_hot(targets, len(room_list))
+            loss_targets = loss_targets.view(B, len(room_list.items()))
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
         return logits, loss
