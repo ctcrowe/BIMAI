@@ -41,7 +41,7 @@ def Test(model, text, device):
         B = B.view(1, -1)
         logits, loss = model(device, A, B)
         max = torch.argmax(logits).item()
-        print(encoding)
+        print(logits)
         print(room_list[max])
         print("")
         encoding.append(max)
@@ -51,7 +51,6 @@ def Test(model, text, device):
     output = room_list[encoding[0]]
     for i in range(len(encoding)- 1):
         output += "," + room_list[encoding[i + 1]]
-    print(output)
     return output
 
 class UnitRoomsDataset(Dataset):
@@ -74,10 +73,10 @@ class UnitRoomsModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
-        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
         self.room_token_embedding_table = nn.Embedding(len(room_list), embd_size)
         self.room_position_embedding_table = nn.Embedding(block_size, embd_size)
-        self.room_blocks = nn.Sequential(*[timed.TimedBlock(2 * embd_size, n_head = n_head, block_size = block_size) for _ in range(room_layers)])
+        self.room_blocks = nn.Sequential(*[timed.TimedBlock(embd_size, n_head = n_head, block_size = block_size) for _ in range(input_layers)])
+        self.blocks = nn.Sequential(*[static.Block(2 * embd_size, n_head = n_head) for _ in range(room_layers)])
         self.ln_f = nn.LayerNorm(2 * embd_size)
         self.lm_head = nn.Linear(2 * embd_size, len(room_list))
         self.apply(self.__init__weights)
@@ -92,17 +91,16 @@ class UnitRoomsModel(nn.Module):
 
     def forward(self, device, X, Y, targets = None):
         x = self.input_basis(X)
-        x = self.input_blocks(x)
         B, T = Y.shape
         tok_emb = self.room_token_embedding_table(Y)
         pos_emb = self.room_position_embedding_table(torch.arange(T, device = device))
         emb = tok_emb + pos_emb
-        x = x.unsqueeze(dim = -2).expand(-1, block_size, -1)
-        x = torch.cat([x, emb], dim=-1)
-        x = self.room_blocks(x)
+        emb = self.room_blocks(emb)
+        emb = torch.sum(emb, dim=-2, keepdim = False)
+        x = torch.cat([emb, x], dim = -1)
+        x = self.blocks(x)
         x = self.ln_f(x)
-        x = self.lm_head(x)
-        logits = torch.sum(x, dim=-2, keepdim=False)
+        logits = self.lm_head(x)
 
         if targets is None:
             loss = None
