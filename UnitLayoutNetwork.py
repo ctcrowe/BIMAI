@@ -17,45 +17,34 @@ n_layer = 4
 dropout = 0.2
 # ------------
 
-room_map = {"GREAT ROOM" : 0,
-            "BEDROOM" : 1,
-            "MASTER BEDROOM" : 2,
-            "BATHROOM" : 3,
-            "MASTER BATHROOM" : 4,
-            "POWDER ROOM" : 5,
-            "KITCHEN" : 6,
-            "LIVING ROOM" : 7,
-            "DINING ROOM" : 8,
-            "STUDY" : 9,
-            "FAMILY ROOM" : 10,
-            "OFFICE" : 11,
-            "LAUNDRY" : 12}
+room_map = {"" : 0
+            "GREAT ROOM" : 1,
+            "BEDROOM" : 2,
+            "MASTER BEDROOM" : 3,
+            "BATHROOM" : 4,
+            "MASTER BATHROOM" : 5,
+            "POWDER ROOM" : 6,
+            "KITCHEN" : 7,
+            "LIVING ROOM" : 8,
+            "DINING ROOM" : 9,
+            "STUDY" : 10,
+            "FAMILY ROOM" : 11,
+            "OFFICE" : 12,
+            "LAUNDRY" : 13}
 
-def get_Sample(input, printSample=False):
+def get_Samples(input):
     input = input.strip().upper()
     lines = input.split(',')
+    for i in range(len(lines) - 2):
+        newSample = [0]
+        for j in range(len(lines) - 1):
+            newSample.a
     line = lines[0]
     line2 = lines[1]
     sample = [0] * block_size
     catName = [0] * block_size
     cutSurf = [0]
-    for i in range(block_size):
-        try : sample[i] = Alpha.chars.index(line[i])
-        except : pass
-    for i in range(block_size):
-        try : catName[i] = Alpha.chars.index(line2[i])
-        except : pass
-    try :
-        cutSurf[0] = int(lines[2]) - 1
-    except :
-        cutSurf[0] = 0
-    try :
-        classification = int(lines[-1])
-    except :
-        classification = 1
-        
-    if printSample :
-        print(input, sample, catName, cutSurf, classification)
+            
     return torch.tensor(sample), torch.tensor(catName), torch.tensor(cutSurf, dtype = torch.float), torch.tensor(classification)
 
 def Test(model, text, device):
@@ -70,13 +59,13 @@ def Test(model, text, device):
     max = torch.argmax(logits)
     return str(max.item())
 
-class VisibilityDataset(Dataset):
+class UnitRoomsDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
         self.max_len = block_size
         for line in lines:
-            name, category, gtype, sample = get_Sample(line)
+            [name, category, gtype, sample] = get_Samples(line)
             self.data.append([name, category, gtype, sample])
         self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
     
