@@ -4,8 +4,16 @@ import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
 import ControlNetwork as control
+import UnitLayoutNetwork as units
 
 def pick(text):
+    if text == "Units":
+        txt_path = "Datasets/UnitData.txt"
+        path = "Models/UnitNetwork.pt"
+        model = units.Something()
+        testMdl = units.Test
+        dataset = units.Something
+        return txt_path, path, model, testMdl, dataset
     if text == "Visibility":
         txt_path = "Datasets/VisibilityData.txt"
         path = "Models/VisibilityNetworkv2.pt"
