@@ -7,7 +7,7 @@ from torch.nn import functional as F
 from torch.utils.data import Dataset
 
 # hyperparameters
-block_size = 64
+block_size = 32
 embd_size = 64
 n_head = 4
 input_layers = 2
@@ -17,28 +17,24 @@ n_layer = 4
 dropout = 0.2
 # ------------
 
-room_map = {"" : 0
-            "GREAT ROOM" : 1,
-            "BEDROOM" : 2,
-            "MASTER BEDROOM" : 3,
-            "BATHROOM" : 4,
-            "MASTER BATHROOM" : 5,
-            "POWDER ROOM" : 6,
-            "KITCHEN" : 7,
-            "LIVING ROOM" : 8,
-            "DINING ROOM" : 9,
-            "STUDY" : 10,
-            "FAMILY ROOM" : 11,
-            "OFFICE" : 12,
-            "LAUNDRY" : 13}
+room_list = ["", "GREAT ROOM", "BEDROOM", "MASTER BEDROOM", "BATHROOM", "MASTER BATHROOM", "POWDER ROOM", "KITCHEN", "LIVING ROOM", "DINING ROOM", "STUDY", "FAMILY ROOM", "OFFICE", "LAUNDRY", "DEN"]
+data_map = { s:i for i,s in enumerate(room_list) }
+room_map = { i:s for i,s in enumerate(room_list) }
 
+encode = lambda s : [data_map[word] for word in s.strip().upper().split(',')[1:]]
+decode = lambda l : ''.join([room_map
+
+#might be able to remove get_Samples entirely with encode / decode structure
 def get_Samples(input):
+    samples = []
     input = input.strip().upper()
     lines = input.split(',')
     for i in range(len(lines) - 2):
-        newSample = [0]
-        for j in range(len(lines) - 1):
-            newSample.a
+        newSample = [0] * block_size
+        newSample[0] = float(lines[0])
+        for j in range(block_size - 1):
+            try : newSample[i + 1] = room_map[lines[i]]
+            except : newSample[i + 1] = 0
     line = lines[0]
     line2 = lines[1]
     sample = [0] * block_size
