@@ -12,7 +12,7 @@ def pick(text):
         path = "Models/UnitNetwork.pt"
         model = units.Something()
         testMdl = units.Test
-        dataset = units.Something
+        dataset = units.UnitRoomsDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Visibility":
         txt_path = "Datasets/VisibilityData.txt"
