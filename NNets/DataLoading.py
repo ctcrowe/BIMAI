@@ -12,14 +12,14 @@ def create_datasets(input_file, dataset):
         data = f.read()
     inputs = data.splitlines()
 
-    test_set_size = min(1000, int(len(inputs) * 0.1))
-    rp = torch.randperm(len(inputs)).tolist()
-    train_words = [inputs[i] for i in rp[:-test_set_size]]
-    test_words = [inputs[i] for i in rp[-test_set_size:]]
-    print(f"split up the dataset into {len(train_words)} training examples and {len(test_words)} test examples")
+    data = dataset(inputs)
 
-    train_dataset = dataset(train_words)
-    test_dataset = dataset(test_words)
+    test_set_size = min(1000, int(len(data.data) * 0.1))
+    rp = torch.randperm(len(data.data)).tolist()
+
+    train_dataset = [data.data[i] for i in rp[:-test_set_size]]
+    test_dataset = [data.data[i] for i in rp[-test_set_size:]]
+    print(f"split up the dataset into {len(train_dataset)} training examples and {len(test_dataset)} test examples")
     return train_dataset, test_dataset
   
 class InfiniteDataLoader:

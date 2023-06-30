@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 
 # hyperparameters
 block_size = 32
-embd_size = 32
+embd_size = 128
 n_head = 4
 input_layers = 2
 room_layers = 4
@@ -24,33 +24,43 @@ encode = lambda s : [data_map[word] for word in s.strip().upper().split(',')[1:]
 
 def get_Sample(area, encoding, end_vector_point):
     dataset = [0] * block_size
-    input_area = [(float)(input.split(',')[0])]
-    for i in range(len(input_encoding) - 2):
-        dataset = [0] * block_size
-        for j in range(block_size):
-            try : dataset[j] = input_encoding[i + j]
-            except : dataset[j] = 0
-        samples.append([torch.tensor(input_area), torch.tensor(dataset), torch.tensor(input_encoding[i+1])])
-
-    return samples
+    input_area = [(float)(area)]
+    for i in range(end_vector_point):
+        try : dataset[i] = encoding[i]
+        except : dataset[i] = 0
+    try : output = encoding[end_vector_point]
+    except : output = 0
+    return torch.tensor(input_area), torch.tensor(dataset), torch.tensor(output)
 
 def Test(model, text, device):
-    sample = get_Sample(text, True)
-    A, B, C = sample
-    A = A.view(1, -1)
-    B = B.view(1, -1)
-    logits, loss = model(device, A, B)
-    print(logits)
-    max = torch.argmax(logits)
-    return room_list[max]
+    encoding = []
+    for i in range(block_size):
+        sample = get_Sample(text, encoding, len(encoding))
+        A, B, C = sample
+        A = A.view(1, -1)
+        B = B.view(1, -1)
+        logits, loss = model(device, A, B)
+        max = torch.argmax(logits).item()
+        print(encoding)
+        print(room_list[max])
+        print("")
+        encoding.append(max)
+
+        if max == 0 : break
+    
+    output = room_list[encoding[0]]
+    for i in range(len(encoding)- 1):
+        output += "," + room_list[encoding[i + 1]]
+    print(output)
+    return output
 
 class UnitRoomsDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         for line in lines:
-            input_area = [(float)(line.split(',')[0])]
+            input_area = (line.split(',')[0])
             input_encoding = encode(line)
-            for i in range(len(input_encoding) - 2):
+            for i in range(len(input_encoding)):
                 self.data.append(get_Sample(input_area, input_encoding, i))
     
     def __len__(self):
@@ -63,8 +73,8 @@ class UnitRoomsDataset(Dataset):
 class UnitRoomsModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.input_basis = nn.Linear(1, embd_size - 4, dtype = torch.float)
-        self.input_blocks = nn.Sequential(*[static.Block(embd_size - 4, n_head = n_head) for _ in range(input_layers)])
+        self.input_basis = nn.Linear(1, embd_size, dtype = torch.float)
+        self.input_blocks = nn.Sequential(*[static.Block(embd_size, n_head = n_head) for _ in range(input_layers)])
         self.room_token_embedding_table = nn.Embedding(len(room_list), embd_size)
         self.room_position_embedding_table = nn.Embedding(block_size, embd_size)
         self.room_blocks = nn.Sequential(*[timed.TimedBlock(2 * embd_size, n_head = n_head, block_size = block_size) for _ in range(room_layers)])
@@ -80,16 +90,14 @@ class UnitRoomsModel(nn.Module):
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
-    def forward(self, device, X, Y, targets = None, batch_size = 8):
+    def forward(self, device, X, Y, targets = None):
         x = self.input_basis(X)
         x = self.input_blocks(x)
-        y = torch.rand(batch_size, 4, dtype = torch.float)
-        x = torch.cat([x, y], dim=-1)
         B, T = Y.shape
         tok_emb = self.room_token_embedding_table(Y)
         pos_emb = self.room_position_embedding_table(torch.arange(T, device = device))
         emb = tok_emb + pos_emb
-        x = x.unsqueeze(dim = -2).expand(-1, embd_size, -1)
+        x = x.unsqueeze(dim = -2).expand(-1, block_size, -1)
         x = torch.cat([x, emb], dim=-1)
         x = self.room_blocks(x)
         x = self.ln_f(x)
