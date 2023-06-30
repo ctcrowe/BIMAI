@@ -50,25 +50,22 @@ def RunTraining(dataset):
         
 while True:
     datatype = input("Network Type?")
-    if datatype != "Unit":
-        txt_path, path, model, testMdl, dataset = pick(datatype)
-        if model is not None:
-            if os.path.isfile(path):
-                statedict = torch.load(path)
-                model.load_state_dict(statedict)
+    txt_path, path, model, testMdl, dataset = pick(datatype)
+    if model is not None:
+        if os.path.isfile(path):
+            statedict = torch.load(path)
+            model.load_state_dict(statedict)
 
-            m = model.to(device)
-            print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
-            optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
+        m = model.to(device)
+        print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
+        optimizer = torch.optim.AdamW(model.parameters(), lr = learning_rate)
         
-            while True:
-                usage = input("Train or Test?")
-                if usage == "Test":
-                    test = ""
-                    while test != "X":
-                        text = input("Test your room name")
-                        print(testMdl(model, text, device))
-                elif usage == "Train":
-                    RunTraining(dataset)
-    else:
-        break
+        while True:
+            usage = input("Train or Test?")
+            if usage == "Test":
+                test = ""
+                while test != "X":
+                    text = input("Test your room name")
+                    print(testMdl(model, text, device))
+            elif usage == "Train":
+                RunTraining(dataset)
