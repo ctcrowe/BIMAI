@@ -10,7 +10,7 @@ def pick(text):
     if text == "Units":
         txt_path = "Datasets/UnitData.txt"
         path = "Models/UnitNetwork.pt"
-        model = units.Something()
+        model = units.UnitRoomsModel()
         testMdl = units.Test
         dataset = units.UnitRoomsDataset
         return txt_path, path, model, testMdl, dataset
