@@ -20,9 +20,9 @@ room_list = ["NULL", "GREAT ROOM", "BEDROOM", "MASTER BEDROOM", "BATHROOM", "MAS
              "KITCHEN / LIVING", "LIVING ROOM", "DINING ROOM", "STUDY", "FAMILY ROOM", "OFFICE", "LAUNDRY", "DEN", "CLOSET", "PANTRY"]
 data_map = { s:i for i,s in enumerate(room_list) }
 
-encode = lambda s : [data_map[word] for word in s.strip().upper().split(',')[1:]]
+encode = lambda s : [data_map[word] for word in s]
 
-def get_Sample(area, encoding, end_vector_point):
+def get_Sample(area, encoding, desired_areas):
     dataset = [0] * block_size
     input_area = [(float)(area)]
     for i in range(end_vector_point):
@@ -57,10 +57,12 @@ class UnitRoomsDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         for line in lines:
-            input_area = (line.split(',')[0])
-            input_encoding = encode(line)
-            for i in range(len(input_encoding)):
-                self.data.append(get_Sample(input_area, input_encoding, i))
+            input = line.split(',')
+            input_size = (len(input) - 1) / 2
+            input_area = (input[0])
+            input_encoding = encode(input[1:input_size + 1])
+            output = input[input_size + 1:]
+            self.data.append(get_Sample(input_area, input_encoding, output))
     
     def __len__(self):
         return len(self.data)
