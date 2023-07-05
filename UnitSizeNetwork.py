@@ -101,7 +101,7 @@ class UnitRoomsModel(nn.Module):
         x = self.blocks(x)
         x = self.ln_f(x)
         x = self.lm_head(x)
-        logits = torch.Softmax(x)
+        logits = F.softmax(x, dim=-1)
 
         if targets is None:
             loss = None
