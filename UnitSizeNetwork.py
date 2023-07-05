@@ -43,7 +43,6 @@ def Test(model, text, device):
     A = A.view(1, -1)
     B = B.view(1, -1)
     logits, loss = model(device, A, B)
-    
     return logits
 
 class UnitRoomsDataset(Dataset):
