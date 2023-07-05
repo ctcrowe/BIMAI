@@ -22,14 +22,16 @@ data_map = { s:i for i,s in enumerate(room_list) }
 
 encode = lambda s : [data_map[word] for word in s]
 
-def get_Sample(area, encoding, desired_areas):
+def get_Sample(area, encoding, desired_areas = None):
     dataset = [0] * block_size
+    output = [0] * block_size
     input_area = [(float)(area)]
-    for i in range(end_vector_point):
+    for i in range(encoding):
         try : dataset[i] = encoding[i]
         except : dataset[i] = 0
-    try : output = encoding[end_vector_point]
-    except : output = 0
+        if desired_areas is not None:
+            try : output[i] = desired_areas[i] / area
+            except : output[i] = 0
     return torch.tensor(input_area), torch.tensor(dataset), torch.tensor(output)
 
 def Test(model, text, device):
