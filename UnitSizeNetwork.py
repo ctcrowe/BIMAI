@@ -35,25 +35,16 @@ def get_Sample(area, encoding, desired_areas = None):
     return torch.tensor(input_area), torch.tensor(dataset), torch.tensor(output)
 
 def Test(model, text, device):
-    encoding = []
-    for i in range(block_size):
-        sample = get_Sample(text, encoding, len(encoding))
-        A, B, C = sample
-        A = A.view(1, -1)
-        B = B.view(1, -1)
-        logits, loss = model(device, A, B)
-        max = torch.argmax(logits).item()
-        print(logits)
-        print(room_list[max])
-        print("")
-        encoding.append(max)
-
-        if max == 0 : break
+    input = text.split(',')
+    encoding = encode(input[1:])
+    size = (float)(input[0])
+    sample = get_Sample(size, encoding)
+    A, B, C = sample
+    A = A.view(1, -1)
+    B = B.view(1, -1)
+    logits, loss = model(device, A, B)
     
-    output = room_list[encoding[0]]
-    for i in range(len(encoding)- 1):
-        output += "," + room_list[encoding[i + 1]]
-    return output
+    return logits
 
 class UnitRoomsDataset(Dataset):
     def __init__(self, lines):
