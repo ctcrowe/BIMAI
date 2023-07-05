@@ -78,7 +78,7 @@ class UnitRoomsModel(nn.Module):
         self.room_blocks = nn.Sequential(*[timed.TimedBlock(embd_size, n_head = n_head, block_size = block_size) for _ in range(input_layers)])
         self.blocks = nn.Sequential(*[static.Block(2 * embd_size, n_head = n_head) for _ in range(room_layers)])
         self.ln_f = nn.LayerNorm(2 * embd_size)
-        self.lm_head = nn.Linear(2 * embd_size, len(room_list))
+        self.lm_head = nn.Linear(2 * embd_size, block_size)
         self.apply(self.__init__weights)
 
     def __init__weights(self, module):
@@ -100,7 +100,8 @@ class UnitRoomsModel(nn.Module):
         x = torch.cat([emb, x], dim = -1)
         x = self.blocks(x)
         x = self.ln_f(x)
-        logits = self.lm_head(x)
+        x = self.lm_head(x)
+        logits = torch.Softmax(x)
 
         if targets is None:
             loss = None
