@@ -4,15 +4,23 @@ import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
 import ControlNetwork as control
-import UnitLayoutNetwork as units
+import UnitLayoutNetwork as layouts
+import UnitSizeNetwork as size
 
 def pick(text):
-    if text == "Units":
+    if text == "Layouts":
         txt_path = "Datasets/UnitData.txt"
         path = "Models/UnitNetwork.pt"
-        model = units.UnitRoomsModel()
-        testMdl = units.Test
-        dataset = units.UnitRoomsDataset
+        model = layouts.UnitRoomsModel()
+        testMdl = layouts.Test
+        dataset = layouts.UnitRoomsDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "Size":
+        txt_path = "Datasets/UnitRatioData.txt"
+        path = "Models/UnitRatioNetwork.pt"
+        model = size.UnitRoomsModel()
+        testMdl = size.Test
+        dataset = size.UnitRoomsDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Visibility":
         txt_path = "Datasets/VisibilityData.txt"
