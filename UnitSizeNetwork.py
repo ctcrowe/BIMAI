@@ -3,6 +3,7 @@ import torch.nn as nn
 import NNets.Alpha as Alpha
 import NNets.TimedAttention as timed
 import NNets.StaticAttention as static
+import numpy as np
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 
@@ -24,15 +25,14 @@ encode = lambda s : [data_map[word] for word in s]
 
 def get_Sample(area, encoding, desired_areas = None):
     dataset = [0] * block_size
-    output = [0] * block_size
+    output = [0.0] * block_size
     input_area = [(float)(area)]
-    for i in range(encoding):
+    for i in range(len(encoding)):
         try : dataset[i] = encoding[i]
         except : dataset[i] = 0
         if desired_areas is not None:
-            try : output[i] = desired_areas[i] / area
-            except : output[i] = 0
-    return torch.tensor(input_area), torch.tensor(dataset), torch.tensor(output)
+            output[i] = (float)(desired_areas[i])
+    return torch.tensor(input_area), torch.tensor(dataset), torch.tensor(output, dtype=torch.float)
 
 def Test(model, text, device):
     input = text.split(',')
@@ -50,11 +50,11 @@ class UnitRoomsDataset(Dataset):
         self.data = []
         for line in lines:
             input = line.split(',')
-            input_size = (len(input) - 1) / 2
+            input_size = (int)((len(input) - 1) / 2)
             input_area = (input[0])
-            input_encoding = encode(input[1:input_size + 1])
+            input_encoding = encode(input[1:input_size])
             output = input[input_size + 1:]
-            self.data.append(get_Sample(input_area, input_encoding, output))
+            self.data.append(get_Sample(input_area, input_encoding, desired_areas = output))
     
     def __len__(self):
         return len(self.data)
@@ -92,18 +92,18 @@ class UnitRoomsModel(nn.Module):
         emb = self.room_blocks(emb)
         emb = torch.sum(emb, dim=-2, keepdim = False)
         x = torch.cat([emb, x], dim = -1)
+        for i in range(x.size()[0]):
+            noise = torch.tensor(np.random.normal(0, 1, x[i].size()), dtype=torch.float)
+            x[i] = x[i] + noise
         x = self.blocks(x)
         x = self.ln_f(x)
-        x = self.lm_head(x)
-        logits = F.softmax(x, dim=-1)
+        logits = self.lm_head(x)
 
         if targets is None:
             loss = None
         else:
             B, C = logits.shape
             logits = logits.view(B, C)
-            loss_targets = torch.nn.functional.one_hot(targets, len(room_list))
-            loss_targets = loss_targets.view(B, len(room_list))
-            loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
+            loss = F.mse_loss(logits, targets)
 
         return logits, loss
