@@ -5,6 +5,7 @@ import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
 import ControlNetwork as control
 import SheetConfirmation as isSheet
+import SheetNumberIndex as SheetNo
 import UnitLayoutNetwork as layouts
 import UnitSizeNetwork as size
 
@@ -22,6 +23,13 @@ def pick(text):
         model = isSheet.SheetModel()
         testMdl = isSheet.Test
         dataset = isSheet.SheetConfDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "SheetNo":
+        txt_path = "Datasets/SheetNo.txt"
+        path = "Models/SheetNumbNetwork.pt"
+        model = SheetNo.SheetNoModel()
+        testMdl = SheetNo.Test
+        dataset = SheetNo.SheetNoDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Size":
         txt_path = "Datasets/UnitRatioData.txt"
