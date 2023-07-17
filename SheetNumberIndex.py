@@ -18,7 +18,7 @@ dropout = 0.2
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
     data = [0] * block_size
-    for i in range(len(input) - 2):
+    for i in range(len(input) - (len(input.split(',')[-1]) + 1)):
         try :
             data[i] = Alpha.chars.index(input[i])
         except :
