@@ -38,7 +38,7 @@ def Test(model, text, device):
     print(A)
     logits, loss = model(device, A)
     print(logits)
-    print(torch.max(logits).item())
+    print(torch.max(F.softmax(logits, dim = -1)).item())
     max = torch.argmax(logits).item()
     return max
 
