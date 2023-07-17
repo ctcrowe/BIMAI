@@ -7,7 +7,7 @@ from torch.utils.data import Dataset
 
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
-block_size = 128
+block_size = 256
 max_iters = 5000
 eval_interval = 100
 eval_iters = 200
@@ -19,22 +19,20 @@ dropout = 0.2
 
 def get_Sample(input, printSample=False):
     input = input.strip().upper()
-    lines = input.split(',')
-    line = lines[0]
-    viewName = [0] * block_size
-    for i in range(len(line)):
+    data = [0] * block_size
+    for i in range(len(input) - 2):
         try :
-            viewName[i] = Alpha.chars.index(line[i])
+            data[i] = Alpha.chars.index(input[i])
         except :
             pass
     try :
-        classification = lines[-1]
+        classification = input.split(',')[-1]
     except :
         classification = 0
         
     if printSample :
         print(input, viewName, classification)
-    return torch.tensor(viewName), torch.tensor(classification)
+    return torch.tensor(data), torch.tensor(classification)
 
 def Test(model, text, device):
     sample = get_Sample(text, True)
@@ -44,17 +42,14 @@ def Test(model, text, device):
     logits, loss = model(device, A)
     print(logits)
     max = torch.argmax(logits)
-    return list(class_map.keys())[max]
+    return max
 
-class OLFDataset(Dataset):
+class SheetConfDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
-        self.class_map = class_map
         self.max_len = block_size
-        #with open('OLFNetworkData.txt', 'r', encoding='utf-8') as f:
-            #text = f.read()
-        for line in lines: # text.splitlines():
+        for line in lines:
             base, sample = get_Sample(line)
             self.data.append([base, sample])
         self.stoi = {ch:i+1 for i,ch in enumerate(Alpha.chars)}
@@ -63,8 +58,8 @@ class OLFDataset(Dataset):
         return len(self.data)
     
     def __getitem__(self, idx):
-        data, class_name = self.data[idx]
-        return data, class_name
+        data, yn = self.data[idx]
+        return data, yn
     
 class OLFModel(nn.Module):
     def __init__(self):
