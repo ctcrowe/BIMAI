@@ -12,7 +12,6 @@ n_embd = 16
 n_head = 3
 n_layer = 3
 n_outputs = 256
-dropout = 0.2
 # ------------
 
 def get_Sample(input, printSample=False):
