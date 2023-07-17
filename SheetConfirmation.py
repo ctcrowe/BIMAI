@@ -8,12 +8,9 @@ from torch.utils.data import Dataset
 # hyperparameters
 batch_size = 8 # how many independent sequences will we process in parallel?
 block_size = 256
-max_iters = 5000
-eval_interval = 100
-eval_iters = 200
-n_embd = 64
-n_head = 4
-n_layer = 4
+n_embd = 16
+n_head = 3
+n_layer = 3
 dropout = 0.2
 # ------------
 
@@ -26,12 +23,12 @@ def get_Sample(input, printSample=False):
         except :
             pass
     try :
-        classification = input.split(',')[-1]
+        classification = (int)(input.split(',')[-1])
     except :
         classification = 0
         
     if printSample :
-        print(input, viewName, classification)
+        print(input, data, classification)
     return torch.tensor(data), torch.tensor(classification)
 
 def Test(model, text, device):
@@ -41,7 +38,7 @@ def Test(model, text, device):
     print(A)
     logits, loss = model(device, A)
     print(logits)
-    max = torch.argmax(logits)
+    max = torch.argmax(logits).item()
     return max
 
 class SheetConfDataset(Dataset):
