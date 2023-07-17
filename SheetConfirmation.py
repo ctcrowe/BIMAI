@@ -68,7 +68,7 @@ class OLFModel(nn.Module):
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
-        self.lm_head = nn.Linear(n_embd, len(class_map.items()))
+        self.lm_head = nn.Linear(n_embd, 2)
         self.apply(self.__init__weights)
 
     def __init__weights(self, module):
@@ -94,8 +94,8 @@ class OLFModel(nn.Module):
         else:
             B, C = logits.shape
             logits = logits.view(B, C)
-            loss_targets = torch.nn.functional.one_hot(targets, len(class_map.items()))
-            loss_targets = loss_targets.view(B, len(class_map.items()))
+            loss_targets = torch.nn.functional.one_hot(targets, 2)
+            loss_targets = loss_targets.view(B, 2)
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
         return logits, loss
