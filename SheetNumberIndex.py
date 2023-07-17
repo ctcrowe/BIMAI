@@ -11,6 +11,7 @@ block_size = 256
 n_embd = 16
 n_head = 3
 n_layer = 3
+n_outputs = 256
 dropout = 0.2
 # ------------
 
@@ -65,7 +66,7 @@ class SheetModel(nn.Module):
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(*[timed.TimedBlock(n_embd, n_head = n_head,block_size=block_size) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd)
-        self.lm_head = nn.Linear(n_embd, 2)
+        self.lm_head = nn.Linear(n_embd, n_outputs)
         self.apply(self.__init__weights)
 
     def __init__weights(self, module):
@@ -91,8 +92,8 @@ class SheetModel(nn.Module):
         else:
             B, C = logits.shape
             logits = logits.view(B, C)
-            loss_targets = torch.nn.functional.one_hot(targets, 2)
-            loss_targets = loss_targets.view(B, 2)
+            loss_targets = torch.nn.functional.one_hot(targets, n_outputs)
+            loss_targets = loss_targets.view(B, n_outputs)
             loss = F.cross_entropy(logits, loss_targets.type(torch.FloatTensor))
 
         return logits, loss
