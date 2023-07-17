@@ -4,6 +4,7 @@ import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
 import ControlNetwork as control
+import SheetConfirmation as isSheet
 import UnitLayoutNetwork as layouts
 import UnitSizeNetwork as size
 
@@ -14,6 +15,13 @@ def pick(text):
         model = layouts.UnitRoomsModel()
         testMdl = layouts.Test
         dataset = layouts.UnitRoomsDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "Sheet":
+        txt_path = "Datasets/SheetConf.txt"
+        path = "Models/SheetConfNetwork.pt"
+        model = isSheet.SheetModel()
+        testMdl = isSheet.Test
+        dataset = isSheet.SheetConfDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Size":
         txt_path = "Datasets/UnitRatioData.txt"

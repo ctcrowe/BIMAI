@@ -61,7 +61,7 @@ class SheetConfDataset(Dataset):
         data, yn = self.data[idx]
         return data, yn
     
-class OLFModel(nn.Module):
+class SheetModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
