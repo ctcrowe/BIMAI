@@ -20,6 +20,21 @@ A2.05,BUILDING D PLANS,3 - ARCHITECTURAL,●,1
 A2.06,BUILDING E PLANS - BASEMENT,3 - ARCHITECTURAL,●,1
 A2.07,BUILDING E PLANS - GROUND FLOOR,3 - ARCHITECTURAL,●,1
 A2.08,BUILDING E PLANS - 2ND FLOOR,3 - ARCHITECTURAL,●,1
+0
+,,Discipline,Seq. 1 - 100% SD,0
+Discipline,Seq. 1 - 100% SD,0
+,Discipline,Seq. 1 - 100% SD,0
+,,,Discipline,Seq. 1 - 100% SD,0
+0
+,,Discipline,Seq. 1 - 100% SD,0
+Discipline,Seq. 1 - 100% SD,0
+,Discipline,Seq. 1 - 100% SD,0
+,,,Discipline,Seq. 1 - 100% SD,0
+0
+,,Discipline,Seq. 1 - 100% SD,0
+Discipline,Seq. 1 - 100% SD,0
+,Discipline,Seq. 1 - 100% SD,0
+,,,Discipline,Seq. 1 - 100% SD,0
 A3.41,BUILDING A ELEVATIONS,3 - ARCHITECTURAL,●,1
 A3.42,BUILDING B ELEVATIONS,3 - ARCHITECTURAL,●,1
 A3.43,BUILDING C ELEVATIONS,3 - ARCHITECTURAL,●,1
