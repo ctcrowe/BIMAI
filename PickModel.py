@@ -4,6 +4,7 @@ import OLFNetwork as olfNetwork
 import SpaceFunctionNetwork as sfNetwork
 import VisNetwork as visNetwork
 import ControlNetwork as control
+import HeaderConfirmation as isHeading
 import SheetConfirmation as isSheet
 import SheetNumberIndex as SheetNo
 import UnitLayoutNetwork as layouts
@@ -16,6 +17,13 @@ def pick(text):
         model = layouts.UnitRoomsModel()
         testMdl = layouts.Test
         dataset = layouts.UnitRoomsDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "Heading":
+        txt_path = "Datasets/HeadingConf.txt"
+        path = "Models/HeadingConfNetwork.pt"
+        model = isHeading.HeadingModel()
+        testMdl = isHeading.Test
+        dataset = isHeading.HeadingConfDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Sheet":
         txt_path = "Datasets/SheetConf.txt"
