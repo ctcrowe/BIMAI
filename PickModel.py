@@ -6,7 +6,7 @@ import VisNetwork as visNetwork
 import ControlNetwork as control
 import HeaderConfirmation as isHeading
 import SheetConfirmation as isSheet
-import SheetNumberIndex as SheetNo
+import SheetDataIndex as Sheet
 import UnitLayoutNetwork as layouts
 import UnitSizeNetwork as size
 
@@ -32,12 +32,26 @@ def pick(text):
         testMdl = isSheet.Test
         dataset = isSheet.SheetConfDataset
         return txt_path, path, model, testMdl, dataset
+    if text == "Sheet Discipline":
+        txt_path = "Datasets/SheetDiscipline.txt"
+        path = "Models/SheetDisciplineNetwork.pt"
+        model = Sheet.SheetModel()
+        testMdl = Sheet.Test
+        dataset = Sheet.SheetDataset
+        return txt_path, path, model, testMdl, dataset
+    if text == "SheetName":
+        txt_path = "Datasets/SheetName.txt"
+        path = "Models/SheetNameNetwork.pt"
+        model = Sheet.SheetModel()
+        testMdl = Sheet.Test
+        dataset = Sheet.SheetDataset
+        return txt_path, path, model, testMdl, dataset
     if text == "SheetNo":
         txt_path = "Datasets/SheetNo.txt"
         path = "Models/SheetNumbNetwork.pt"
-        model = SheetNo.SheetNoModel()
-        testMdl = SheetNo.Test
-        dataset = SheetNo.SheetNoDataset
+        model = Sheet.SheetModel()
+        testMdl = Sheet.Test
+        dataset = Sheet.SheetDataset
         return txt_path, path, model, testMdl, dataset
     if text == "Size":
         txt_path = "Datasets/UnitRatioData.txt"
