@@ -32,7 +32,7 @@ def pick(text):
         testMdl = isSheet.Test
         dataset = isSheet.SheetConfDataset
         return txt_path, path, model, testMdl, dataset
-    if text == "Sheet Discipline":
+    if text == "SheetDisc":
         txt_path = "Datasets/SheetDiscipline.txt"
         path = "Models/SheetDisciplineNetwork.pt"
         model = Sheet.SheetModel()
