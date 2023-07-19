@@ -42,7 +42,7 @@ def Test(model, text, device):
     max = torch.argmax(logits).item()
     return max
 
-class SheetNoDataset(Dataset):
+class SheetDataset(Dataset):
     def __init__(self, lines):
         self.data = []
         self.chars = Alpha.chars
@@ -59,7 +59,7 @@ class SheetNoDataset(Dataset):
         data, yn = self.data[idx]
         return data, yn
     
-class SheetNoModel(nn.Module):
+class SheetModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(len(Alpha.chars), n_embd)
